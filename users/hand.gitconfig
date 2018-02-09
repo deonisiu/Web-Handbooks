@@ -27,4 +27,5 @@
 	unstage = reset HEAD --
 	back = checkout --
 	all = log --oneline --graph --all
-	diffs = diff --stat
+	difs = diff --stat
+	dift = difftool -y

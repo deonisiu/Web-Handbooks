@@ -36,7 +36,3 @@ xampro(){
   cd /e/XAMPP/htdocs/projects
   ls
 }
-
-difftool(){
-  git difftool -y
-}
