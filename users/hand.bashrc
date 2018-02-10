@@ -7,6 +7,15 @@ alias cd1='cd ' $1 && 'ls'
 alias vib='vi ~/.bashrc'
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
 
+alias gs='git status'
+alias ga='git add'
+alias gb='git branch'
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout'
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
 sd(){
   cd $1
   ls
