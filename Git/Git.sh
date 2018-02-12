@@ -287,7 +287,7 @@ $ git commit --amend [-m "text"]
 Пример:
 $ git commit -m "text"
 $ git add file.txt
-$ git commit --ammend -m "new text" (добавление file.txt в последний коммит + новый комментарий)
+$ git commit --amend -m "new text" (добавление file.txt в последний коммит + новый комментарий)
 
 //? Сделать коммит, который удаляет изменения, сохраненные нежелательным коммитом
 $ git revert HEAD (удаляет коммит на котором указатель HEAD)
