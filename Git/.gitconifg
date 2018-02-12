@@ -6,8 +6,6 @@
 [user]
 	name = Denis Savich
 	email = deonisiu@ya.ru
-	
-
 [difftool "araxis"]
     path = "/c/Program Files (x86)/Araxis/Araxis Merge/compare.exe"
     renames = true

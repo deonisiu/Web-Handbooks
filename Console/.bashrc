@@ -2,10 +2,11 @@ PROMPT_COMMAND='ConEmuC -StoreCWD'
 alias c='clear'
 alias ll='ls -l'
 alias x='exit'
-alias ls='ls -S -1 --color'
+alias ls='ls -S -1 --color -a'
 alias cd1='cd ' $1 && 'ls'
 alias vib='vi ~/.bashrc'
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
+PATH=$PATH:'/c/Program Files/Notepad++' $*
 
 alias gs='git status'
 alias ga='git add'
