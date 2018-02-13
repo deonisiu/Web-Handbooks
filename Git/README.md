@@ -2,7 +2,7 @@
 Здесь будет собираться информация для изучения Git-а
 
 ## Список файлов
-* [Git.sh](git.sh) - Основная собранная информация про Git
+* [Git.sh](Git.sh) - Основная собранная информация про Git
 * [.gitconfig](.gitconfig) - Глобальные настройки Git-a в Windows/users/user
 * [github-manual](github-manual.md) - Справочник по использованию GitHub
 * [github-markdown](github-markdown.md) - Справочник по использованию синтаксиса markdown

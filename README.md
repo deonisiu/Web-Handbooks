@@ -3,13 +3,13 @@
 
 ## Разделы
 
-* [CDN - пустой](cdn/)
-* [Console, Bash, Vim](console/)
-* [CSS - пустой](css/)
-* [Git, markdown](git/)
-* [HTML - пустой](html/)
-* [HTTP-REST - пустой](http-rest/)
-* [JavaScript - пустой](javascript/)
+* [CDN - пустой](CDN/)
+* [Console, Bash, Vim](Console/)
+* [CSS - пустой](CSS/)
+* [Git, markdown](Git/)
+* [HTML - пустой](HTML/)
+* [HTTP-REST - пустой](HTTP-REST/)
+* [JavaScript - пустой](JavaScript/)
 
 ## Дополнительные инструменты
 
