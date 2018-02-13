@@ -8,6 +8,14 @@ alias vib='vi ~/.bashrc'
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
 PATH=$PATH:'/c/Program Files/Notepad++' $*
 
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1='\[\e[1;32m\]\D{%d.%m.%y} \t \[\e[36m\]\w\[\e[33m\]`git_branch`\n\$ \[\e[31m\]'
+
+trap 'printf "\e[0m" "$_"' DEBUG
+
 alias gs='git status'
 alias ga='git add'
 alias gb='git branch'

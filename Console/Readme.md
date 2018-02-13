@@ -3,11 +3,11 @@
 Статья по настройке терминала в Windows - https://isqua.ru/blog/2016/11/05/nastroika-tierminala-cmder-v-windows/
 
 ## Список файлов
-* Vim.sh - Основная информация про редактор Vim
-* Bash.sh - Основная информация про оболочку Bash
-* .bashrc - Глобальные Bash настройки в Windows/users/user
+* [Vim.sh](vim.sh) - Справочник по редактору Vim
+* [Bash.sh](bash.sh) - Справочник про оболочку Bash
+* [.bashrc](.bashrc) - Глобальные Bash настройки в Windows/users/user
 
-## Пользовательские настройки Bash
+# Bash
 
 Bash - это интерпретатор командного языка, выполняющий команды поступающие со стандартного устройства ввода (клавиатуры).
 
@@ -19,7 +19,9 @@ Bash - это интерпретатор командного языка, вып
 * Оболочка Bash — шпаргалка для начинающих - https://tproger.ru/translations/bash-cheatsheet/
 * Обустраиваем консоль - http://www.xakep.ru/55981/
 * Цветное приглашение bash - http://www.unixcomp.net/content/35-cvetnoe-priglashenie-bash
-
+* Git советы - http://idoka.ru/git-tips-and-tricks/
+* Bash customization(углубленная) - https://wiki.archlinux.org/index.php/Bash/Prompt_customization_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)
+* Bash Reference Manual - https://www.gnu.org/software/bash/manual/bash.html#Command-Line-Editing
 
 ### Настройки
 
@@ -140,7 +142,8 @@ alias ll='ls -l'
 #### Специальные символы:
 
 * \A время - часы и минуты
-* \d дата в формате »День_недели, Месяц, Число»
+* \d дата в формате "День_недели, Месяц, Число"
+* \D{format} дата в формате format : {%d.%m.%y}, {%y-%m-%d}
 * \e (управляющий символ в коде ASCII) передает окну терминала более сложные опции
 * \h заменяется на имя компьютера (вплоть до первой точки в DNS-имени)
 * \H имя хоста

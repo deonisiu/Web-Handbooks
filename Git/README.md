@@ -1,14 +1,14 @@
-# Справочник по Git и GitHub
+# Справочник Git и GitHub
 Здесь будет собираться информация для изучения Git-а
 
 ## Список файлов
-* Git.sh - Основная собранная информация про Git
-* .gitconfig - Глобальные настройки Git-a в Windows/users/user
-* .github-manual.md - Краткий справочник по использованию GitHub
-* .github-markdown - Краткий справочник по использованию синтаксиса markdown
+* [Git.sh](git.sh) - Основная собранная информация про Git
+* [.gitconfig](.gitconfig) - Глобальные настройки Git-a в Windows/users/user
+* [github-manual](github-manual.md) - Справочник по использованию GitHub
+* [github-markdown](github-markdown.md) - Справочник по использованию синтаксиса markdown
 
 ## Git.sh
-### Краткое оглавление разделов
+### Оглавление разделов
 
 0. Список определений
 1. Общая информация про Git
@@ -30,6 +30,6 @@
 ## Справочник основных команд Git-a
 
 ``` php
-$ git config --global user.name "John Doe" (задать имя пользователя глобально)
+$ git config --global user.name "John Doe" (задать имя пользователя глобально в файле .gitconfig)
 
 ```
