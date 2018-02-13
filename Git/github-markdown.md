@@ -146,8 +146,9 @@ I get 10 times more traffic from [Google][1] than from
 
     [![Логотип Google][logo]][google]
 
-Результат:
+Результат:  
 [![Логотип Google][logo]][google]  
+
 Нужно помнить, что приведенные выше ссылки должны быть определены где-либо в документе:
 
 [logo]: http://www.google.com/images/logo.gif  

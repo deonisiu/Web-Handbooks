@@ -3,8 +3,8 @@
 Статья по настройке терминала в Windows - https://isqua.ru/blog/2016/11/05/nastroika-tierminala-cmder-v-windows/
 
 ## Список файлов
-* [Vim.sh](vim.sh) - Справочник по редактору Vim
-* [Bash.sh](bash.sh) - Справочник про оболочку Bash
+* [Vim.sh](Vim.sh) - Справочник по редактору Vim
+* [Bash.sh](Bash.sh) - Справочник про оболочку Bash
 * [.bashrc](.bashrc) - Глобальные Bash настройки в Windows/users/user
 
 # Bash
