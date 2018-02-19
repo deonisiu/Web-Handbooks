@@ -54,3 +54,8 @@ xampro(){
   cd /e/XAMPP/htdocs/projects
   ls
 }
+
+unipro() {
+  cd /e/Unity3D/projects
+  ls
+}
