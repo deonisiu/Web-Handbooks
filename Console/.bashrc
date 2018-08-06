@@ -1,18 +1,25 @@
-PROMPT_COMMAND='ConEmuC -StoreCWD'
+PROMPT_COMMAND="
+	ConEmuC -StoreCWD;
+	echo -en '\033[37;1;43m ------------ \033[0m\n';
+	ls"
+
 alias c='clear'
 alias ll='ls -l'
 alias x='exit'
 alias ls='ls -S -1 --color -a'
-alias cd1='cd ' $1 && 'ls'
+alias t='touch'
 alias vib='vi ~/.bashrc'
+
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
 PATH=$PATH:'/c/Program Files/Notepad++' $*
+PATH=$PATH:'/e/PHP/PhpStorm 2017.1.4/bin' $*
 
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
 PS1='\[\e[1;32m\]\D{%d.%m.%y} \t \[\e[36m\]\w\[\e[33m\]`git_branch`\n\$ \[\e[31m\]'
+PS2='~ '
 
 trap 'printf "\e[0m" "$_"' DEBUG
 
@@ -25,37 +32,28 @@ alias go='git checkout'
 alias gk='gitk --all&'
 alias gx='gitx --all'
 
+phpstorm() {
+	phpstorm64.exe $* &
+}
+
+t_subl() {
+	t $*
+	subl $*
+}
+
+t_pstorm() {
+	t $*
+	phpstorm64.exe $* &
+}
+
 sd(){
   cd $1
-  ls
 }
 
 .(){
   cd ..
-  ls
 }
 
-nodepro(){
-  cd /e/nodejs/projects
-  ls
-}
-
-gitpro(){
-  cd /e/GitHub/projects
-  ls
-}
-
-phaserpro(){
-  cd /e/Phaser/projects
-  ls
-}
-
-xampro(){
-  cd /e/XAMPP/htdocs/projects
-  ls
-}
-
-unipro() {
-  cd /e/Unity3D/projects
-  ls
+localhost(){
+  cd /e/OpenServer/OSPanel/domains/localhost
 }
