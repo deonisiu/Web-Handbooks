@@ -1,5 +1,5 @@
 # Справочник по настройке и использованию консоли
-Я использую консоль ConEmu - https://conemu.github.io/ или http://cmder.net
+Я использую консоль ConEmu - https://conemu.github.io/ или http://cmder.net  
 Статья по настройке терминала в Windows - https://isqua.ru/blog/2016/11/05/nastroika-tierminala-cmder-v-windows/
 
 ## Список файлов
