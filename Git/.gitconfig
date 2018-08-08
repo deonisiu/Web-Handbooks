@@ -28,6 +28,7 @@
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	difs = diff --stat
 	dift = difftool -y
+	find = grep -n
 
 	ci = commit
 	st = status
@@ -36,4 +37,6 @@
     dump = cat-file -p
 	index = ls-files -s
 [core]
-	editor = subl -n -w
+	editor = subl -w
+#editor = subl -n -w
+# editor = 'C:/Program Files/Sublime Text 3/subl.exe' -multiInst -notabbar -nosession -noPlugin

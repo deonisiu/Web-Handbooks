@@ -1,6 +1,7 @@
 PROMPT_COMMAND="
 	ConEmuC -StoreCWD;
-	echo -en '\033[37;1;43m ------------ \033[0m\n';
+	echo -en '\033[37;1;41m ------------ \033[0m\n';
+	c;
 	ls"
 
 alias c='clear'
@@ -8,7 +9,6 @@ alias ll='ls -l'
 alias x='exit'
 alias ls='ls -S -1 --color -a'
 alias t='touch'
-alias vib='vi ~/.bashrc'
 
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
 PATH=$PATH:'/c/Program Files/Notepad++' $*
@@ -30,7 +30,22 @@ alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout'
 alias gk='gitk --all&'
-alias gx='gitx --all'
+alias gl='git log'
+alias gal='git all'
+alias g_rename='git commit --amend'
+alias g_untr='git rm --cached'
+alias g_res='git reset HEAD'
+alias g_find='git grep'
+alias g_rev='git revert'
+
+
+.bashrc() {
+	subl ~/.bashrc
+}
+
+.gitconf() {
+	subl ~/.gitconfig
+}
 
 phpstorm() {
 	phpstorm64.exe $* &
@@ -56,4 +71,12 @@ sd(){
 
 localhost(){
   cd /e/OpenServer/OSPanel/domains/localhost
+}
+
+home() {
+	cd /e/Projects
+}
+
+m_dir() {
+	mkdir $*
 }
