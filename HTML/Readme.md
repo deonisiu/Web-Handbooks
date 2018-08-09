@@ -5,6 +5,7 @@
 ---
 * [Список тегов html](http://htmlbook.ru/html)
 * [w3c HTML 5.2](https://www.w3.org/TR/html/index.html#contents)
+* [w3c Elements Categories(Flow, Phrasing, Sectioning, Heading, Interactive, Metadata, Embedded)](https://www.w3.org/TR/html/dom.html#kinds-of-content)
 * [w3c Validator](http://validator.w3.org)
 
 ## Теги по группам
@@ -12,7 +13,7 @@
 ### [Document metadata](https://www.w3.org/TR/html/document-metadata.html)
 ***Теги:***
 ``` html
-<head> | <title> | <base> | <link> | <meta> | <meta> | <style>
+<head> | <title> | <base> | <link> | <meta> | <style>
 ```
 
 ### [Sections](https://www.w3.org/TR/html/sections.html)
@@ -24,7 +25,7 @@
 ### [Grouping content](https://www.w3.org/TR/html/grouping-content.html)
 ***Теги:***
 ``` html
-<p> | <address> | <hr> | <hr> | <pre> | <blockquote> | <ol> | <ul> | <li> | <dl> | <dt> |
+<p> | <address> | <hr> | <pre> | <blockquote> | <ol> | <ul> | <li> | <dl> | <dt> |
 <dd> | <figure> | <figcaption> | <main> | <div>
 ```
 
@@ -217,3 +218,91 @@
 #### ``<var>Text</>`` &#160; &#8212; &#160; Используется для выделения переменных компьютерных программ. Браузеры обычно помечают текст в контейнере ``<var>`` курсивным начертанием.
 #### ``<video>...</>``![icon](html5_icon.png) &#160; &#8212; &#160; Добавляет, воспроизводит и управляет настройками видеоролика на веб-странице. Путь к файлу задается через атрибут src или вложенный тег ``<source>``.
 #### ``Text<wbr>Text``![icon](html5_icon.png) &#160; &#8212; &#160; Указывает браузеру место, где допускается делать перенос строки в тексте, если этого требует ширина родительского элемента.
+
+## Глобальные атрибуты
+---
+
+``` html
+<html 
+   accesskey = 'Позволяет получить доступ к элементу с помощью заданного сочетания клавиш.'
+   class = 'Определяет имя класса, которое позволяет связать тег со стилевым оформлением.'
+   contenteditable = 'Сообщает, что элемент доступен для редактирования пользователем.'
+   dir = 'Задает направление и отображение текста — слева направо или справа налево.'
+   draggable = 'Указывает, можно ли перетаскивать элемент используя Drag and Drop API.'
+   hidden = 'Скрывает содержимое элемента от просмотра.'
+   id = 'Указывает имя стилевого идентификатора.'
+   lang = 'Браузер использует значение параметра для правильного отображения некоторых национальных символов.'
+   spellcheck = 'Указывает браузеру проверять или нет правописание и грамматику в тексте.'
+   style = 'Применяется для определения стиля элемента с помощью правил CSS.'
+   tabindex = 'Устанавливает порядок получения фокуса при переходе между элементами с помощью клавиши Tab.'
+   title = 'Описывает содержимое элемента в виде всплывающей подсказки.'
+   translate = 'Используется для указания web-браузеру необходимости перевода текстового 
+   содержимого элемента (в том числе и его дочерних элементов) и некоторых его атрибутов.'
+>
+```
+
+## Глобальные события для любого HTML элемента
+---
+
+* onabort
+* onauxclick
+* onblur*
+* oncancel
+* oncanplay
+* oncanplaythrough
+* onchange
+* onclick
+* onclose
+* oncuechange
+* ondblclick
+* ondrag
+* ondragend
+* ondragenter
+* ondragexit
+* ondragleave
+* ondragover
+* ondragstart
+* ondrop
+* ondurationchange
+* onemptied
+* onended
+* onerror*
+* onfocus*
+* oninput
+* oninvalid
+* onkeydown
+* onkeypress
+* onkeyup
+* onload*
+* onloadeddata
+* onloadedmetadata
+* onloadend
+* onloadstart
+* onmousedown
+* onmouseenter
+* onmouseleave
+* onmousemove
+* onmouseout
+* onmouseover
+* onmouseup
+* onwheel
+* onpause
+* onplay
+* onplaying
+* onprogress
+* onratechange
+* onreset
+* onresize*
+* onscroll*
+* onseeked
+* onseeking
+* onselect
+* onshow
+* onstalled
+* onsubmit
+* onsuspend
+* ontimeupdate
+* ontoggle
+* onvolumechange
+* onwaiting
+
