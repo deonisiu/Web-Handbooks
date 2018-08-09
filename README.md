@@ -7,7 +7,7 @@
 * [Console, Bash, Vim](Console/)
 * [CSS - пустой](CSS/)
 * [Git, markdown](Git/)
-* [HTML - пустой](HTML/)
+* [HTML](HTML/)
 * [HTTP-REST - пустой](HTTP-REST/)
 * [JavaScript - пустой](JavaScript/)
 
