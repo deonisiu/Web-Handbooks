@@ -441,3 +441,25 @@ After:
 <link rel="stylesheet" href="style/style-original.css" />
 ```
 
+---
+### Доступность в HTML
+
+* Класс .visually-hidden :
+``` css
+.visually-hiden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0,0,0,0);
+	overflow: hidden;
+}
+```
+
+* Для пустых элементов нужно добавлять лейблы :
+``` html
+BAD - <a href="https://vk.com/"></a>
+GOOD - <a href="https://vk.com/" aria-label="ВКонтакте"></a>
+```
