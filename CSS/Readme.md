@@ -4,6 +4,7 @@
 ## Интересные темы (для изучения)
 
 * Responsive Font Size
+* Box-sizing: content-box(default) | border-box;
 * CSS Icons
 * CSS Links - right order for a propertys :
 1. a:link
@@ -25,6 +26,7 @@
 * [Web Developer Site (w3schools)](https://www.w3schools.com/default.asp)
 * [Комбинация селекторов (WebRef.ru)](https://webref.ru/course/css-tutorial/selector-combine)
 * [Справочник CSS (WebRef.ru)](https://webref.ru/css)
+* [Автопрефиксер CSS онлайн](https://autoprefixer.github.io/ru/)
 
 ---
 ## Комбинация селекторов [WebRef.ru](https://webref.ru/course/css-tutorial/selector-combine)
@@ -165,6 +167,7 @@ input[type="checkbox"] {
 	</tr>
 </table>
 
+---
 ## Создание пользовательского шрифта [(@font-face)](https://www.w3schools.com/css/css3_fonts.asp)
 
 Example:
@@ -208,6 +211,7 @@ div {
 }
 ```
 
+---
 ## CSS Анимации [(animation)](https://www.w3schools.com/css/css3_animations.asp)
 
 Example:
@@ -233,3 +237,47 @@ div {
     animation-delay: 2s;
 }
 ```
+
+---
+## CSS Flexbox
+
+### Алгоритм раскладки во флексах
+1. Определение базовых размеров
+2. Перераспределение свободного места
+3. Применение ограничений размеров(min-width, max-width, min-heigth, max-height)
+
+### Определение базовых размеров - размер элемента вдоль главной оси
+
+1. flex-basis (переопределяет width или height)
+2. width (flex-basis: auto)
+3. height (flex-basis: auto, width: auto)
+4. размер содержимого (all: auto)
+
+### Перераспределение свободного места
+
+1. Изменение размеров гибких элементов (после этапа определения базовых размеров)  
+* flex-grow: 0 - значение по умолчанию. Если больше 0 может поглотить свободное пространство.
+Используется для резиновых раскладок и адаптивности без медиа выражений.
+* flex-shrink: 1 - значение по умолчанию. Если больше 0 и есть отрицательное пространство, то элемент его поглощает и уменьшается.
+
+2. Автоматические отступы ***margin: auto***
+* Работает во всех направлениях
+* Съедает свободное место
+* Если у нескольких элементов есть автоматические отступы, то свободное место делится поровну
+* Свободное место съедается до работы выравниваний - выравнивания ломаются
+
+3. Выравнивание элементов. (вдоль главной оси и вдоль поперечной оси)
+* Вдоль главной оси (justify-content: flex-start | flex-end | center | space-between | space-around)
+* Вдоль поперечной оси (align-items | [align-self]: stretch | flex-start | flex-end | center | baseline)
+
+### Ограничение размеров
+* Минимальные и максимальные размеры не влияют на базовый размер.
+* Применяются в самом конце расчета размеров и свободного пространства
+* Возможны эффекты выпадения из потока
+
+### Построение сеток на флексбоксах
+* Всегда явно задавать размер колонок: width или flex-basis
+* Если количество колонок может меняться то лучше использовать margin
+* Не использовать псевдоэлементы у flex-контейнера
+* flex-grow не подходит для точного соответствия макету
+* Порядок элементов - order: 1
