@@ -13,6 +13,8 @@ alias t='touch'
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
 PATH=$PATH:'/c/Program Files/Notepad++' $*
 PATH=$PATH:'/e/PHP/PhpStorm 2017.1.4/bin' $*
+PATH=$PATH:'/e/JavaScript/WebStorm 2017.1/bin' $*
+PATH=$PATH:'/c/Program Files/Opera' $*
 
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -35,7 +37,7 @@ alias gp='git push'
 alias gf='git fetch'
 alias gl='git log'
 alias gal='git all'
-alias g_rename='git commit --amend'
+alias g_recommit='git commit --amend'
 alias g_untr='git rm --cached'
 alias g_res='git reset HEAD'
 alias g_find='git grep'
@@ -43,16 +45,8 @@ alias g_rev='git revert'
 alias g_space='git diff --check'
 alias g_move='git reset'
 
-g_hub_add() {
-	git remote add $1 https://github.com/deonisiu/$2
-}
-
-g_hub_push() {
-	git push -u $1 $2
-}
-
-g_hub_del() {
-	git push $1 --delete $2
+add_branch() {
+	gr add $1 $2
 }
 
 .bashrc() {
@@ -63,8 +57,16 @@ g_hub_del() {
 	subl ~/.gitconfig
 }
 
-phpstorm() {
+opera() {
+	opera.exe $* &
+}
+
+storm() {
 	phpstorm64.exe $* &
+}
+
+web_storm() {
+	webstorm64.exe $* &
 }
 
 t_subl() {
@@ -87,6 +89,10 @@ sd(){
 
 localhost(){
   cd /e/OpenServer/OSPanel/domains/localhost
+}
+
+download() {
+	cd /d/downloadWORK
 }
 
 home() {
