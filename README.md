@@ -15,7 +15,7 @@
 * [Git, markdown](Git/)
 * [HTML](HTML/)
 * [HTTP-REST - пустой](HTTP-REST/)
-* [JavaScript - пустой](JavaScript/)
+* [JavaScript](JavaScript/)
 * [БЭМ методология](BEM/)
 
 ---
