@@ -17,6 +17,8 @@
 * [HTTP-REST - пустой](HTTP-REST/)
 * [JavaScript](JavaScript/)
 * [БЭМ методология](BEM/)
+* [Bootstrap](Bootstrap/)
+* [Sass/scss](Sass/)
 
 ---
 ## Дополнительные инструменты
