@@ -25,7 +25,7 @@ PS2='~ '
 
 trap 'printf "\e[0m" "$_"' DEBUG
 
-alias server='browser-sync start --server --files "*/*.html, */*.css, */*.php, */*.js"'
+alias server='browser-sync start --server --files "*.html, *.css, *.php, *.js, */*.html, */*.css, */*.php, */*.js"'
 alias gs='git status'
 alias ga='git add'
 alias gb='git branch -v'
