@@ -4,10 +4,10 @@
 ## Полезные ссылки
 
 * [Bootstrap documentation(ru)](https://bootstrap-4.ru/docs/4.1/getting-started/introduction/)
-
+---
 * [Bootstrap 3 Tutorial(w3schools)](https://www.w3schools.com/bootstrap/default.asp)
 * [Bootstrap 3 All classes(w3schools)](https://www.w3schools.com/bootstrap/bootstrap_ref_all_classes.asp)
-
+---
 * [Bootstrap 4 Tutorial(w3schools)](https://www.w3schools.com/bootstrap4/default.asp)
 * [Bootstrap 4 All classes(w3schools)](https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp)
 
