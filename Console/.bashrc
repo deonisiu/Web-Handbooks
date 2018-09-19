@@ -25,6 +25,7 @@ PS2='~ '
 
 trap 'printf "\e[0m" "$_"' DEBUG
 
+alias server='browser-sync start --server --files "*/*.html, */*.css, */*.php, */*.js"'
 alias gs='git status'
 alias ga='git add'
 alias gb='git branch -v'
@@ -49,6 +50,63 @@ add_branch() {
 	gr add $1 $2
 }
 
+.bashrc() {
+	subl ~/.bashrc
+}
+
+.gitconf() {
+	subl ~/.gitconfig
+}
+
+opera() {
+	opera.exe $* &
+}
+
+storm() {
+	phpstorm64.exe $* &
+}
+
+web_storm() {
+	webstorm64.exe $* &
+}
+
+t_subl() {
+	t $*
+	subl $*
+}
+
+t_pstorm() {
+	t $*
+	phpstorm64.exe $* &
+}
+
+sd(){
+  cd $1
+}
+
+.(){
+  cd ..
+}
+
+localhost(){
+  cd /e/OpenServer/OSPanel/domains/localhost
+}
+
+download() {
+	cd /d/downloadWORK
+}
+
+books() {
+	cd /e/books
+}
+
+home() {
+	cd /e/Projects
+}
+
+m_dir() {
+	mkdir $*
+}
 .bashrc() {
 	subl ~/.bashrc
 }
