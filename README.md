@@ -6,19 +6,31 @@
 
 * [HTTP/1.1 Semantic and Content](https://tools.ietf.org/html/rfc7231#page-3)
 
----
+___
 ## Разделы
 
-* [CDN - пустой](CDN/)
+### Среда
+* [Sublime text 3](Sublime/)
 * [Console, Bash, Vim](Console/)
-* [CSS](CSS/)
 * [Git, markdown](Git/)
+
+---
+
+### Основы
 * [HTML](HTML/)
-* [HTTP-REST - пустой](HTTP-REST/)
+* [CSS](CSS/)
 * [JavaScript](JavaScript/)
+---
+
+### Технологии
 * [БЭМ методология](BEM/)
 * [Bootstrap](Bootstrap/)
 * [Sass/scss](Sass/)
+---
+
+### Unsorted
+* [HTTP-REST - пустой](HTTP-REST/)
+* [CDN - пустой](CDN/)
 
 ---
 ## Дополнительные инструменты
