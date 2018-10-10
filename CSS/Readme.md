@@ -29,6 +29,70 @@
 * [Автопрефиксер CSS онлайн](https://autoprefixer.github.io/ru/)
 
 ---
+## Правило @import
+Правило @import работает медленнее, чем тег <link>. В стилях @import не должен использоваться.
+```css
+<!-- Хорошо: подключение тегом link -->
+<link rel="stylesheet" href="module.css">
+
+<!-- Плохо -->
+<style>
+  @import url("module.css");
+</style>
+```
+
+---
+## Порядок свойств
+
+1. Позиционирование
+2. Блочная модель
+3. Типографика
+4. Оформление
+5. Анимация
+6. Разное
+
+```css 
+.declaration-order {
+  /* Позиционирование */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  /* Блочная модель */
+  display: block;
+  float: right;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+
+  /* Типографика */
+  font: normal 13px/1.5 "Arial", sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.5;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  color: #333333;
+
+  /* Оформление */
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  opacity: 1;
+
+  /* Анимация */
+  transition: color 1s;
+
+  /* Разное */
+  will-change: auto;
+}
+```
+
+---
 ## Комбинация селекторов [WebRef.ru](https://webref.ru/course/css-tutorial/selector-combine)
 
 * Группирование селекторов (A, B) - применяет один и тот же стиль сразу к нескольким селекторам

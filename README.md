@@ -2,9 +2,10 @@
 Справочники по изучению web программирования.
 
 ---
-## Быстрые ссылки
+## Полезные ссылки
 
 * [HTTP/1.1 Semantic and Content](https://tools.ietf.org/html/rfc7231#page-3)
+* [BrowserSync](https://browsersync.io)
 
 ___
 ## Разделы
