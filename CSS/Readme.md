@@ -92,6 +92,18 @@
 }
 ```
 
+### Шпаргалка по порядку свойств
+```css
+.class {
+  /* Позиционирование: position, top-left, z-index */
+  /* Блочная модель: display, float, width, height, margin, padding */
+  /* Типографика: font, line-height, text-align, color */
+  /* Оформление: background-color, border, border-radius, opacity */
+  /* Анимация: transform, transition */
+  /* Разное: will-change */
+}
+```
+
 ---
 ## Комбинация селекторов [WebRef.ru](https://webref.ru/course/css-tutorial/selector-combine)
 
