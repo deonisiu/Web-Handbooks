@@ -39,6 +39,27 @@ ___
 * [notepad++](notepad++/)
 
 ---
+## Общая структура проекта
+
+- project/
+  - app/
+    - css/
+    - fonts/
+    - img/
+    - js/
+    - sass/
+      - blocks/
+        - block-name.scss
+      - style.scss
+      - mixins.scss
+      - variables.scss
+    - index.html
+  - dist/
+  - node_modules/
+  - gulpfile.js
+  - package.json
+
+---
 ## Visually hidden
 ``` css
 .visually-hidden:not(:focus):not(:active),
