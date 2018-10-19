@@ -96,7 +96,7 @@
 ```css
 .class {
   /* Позиционирование: position, top-left, z-index */
-  /* Блочная модель: display, float, width, height, margin, padding */
+  /* Блочная модель: display, float, width, height, margin, padding, box-sizing */
   /* Типографика: font, line-height, text-align, color */
   /* Оформление: background-color, border, border-radius, opacity */
   /* Анимация: transform, transition */
