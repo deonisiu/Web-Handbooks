@@ -29,6 +29,10 @@ ___
 * [Sass/scss](Sass/)
 ---
 
+### Автоматизация
+* [NPM](Npm/)
+* [Gulp](Gulp/)
+
 ### Unsorted
 * [HTTP-REST - пустой](HTTP-REST/)
 * [CDN - пустой](CDN/)
