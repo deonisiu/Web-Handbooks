@@ -8,13 +8,13 @@
 * [Gulp рецепты для обычного использования](https://github.com/gulpjs/gulp/tree/v3.9.1/docs/recipes#recipes)
 
 ## Навигация по странице
-* Подключение Gulp
-* gulp.src
-* gulp.dest
-* gulp.task
-* gulp.watch
-* Gulp CLI docs
-* Создание инструкции (task)
+* [Подключение Gulp](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#Подключение-gulp)
+* [gulp.src](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#gulpsrcglobs-options)
+* [gulp.dest](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#gulpdestpath-options---Параметры-подробнее)
+* [gulp.task](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#gulptaskname--deps-fn---Параметры-подробнее)
+* [gulp.watch](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#gulpwatchglob--opts-tasks-or-gulpwatchglob--opts-cb)
+* [Gulp CLI docs](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#gulp-cli-docs---Основной-список-консольных-gulp-команд)
+* [Создание инструкции (task)](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#Создание-инструкции-task)
 
 ---
 ## Общее руководство
