@@ -22,6 +22,8 @@ npm init --yes                // Автоматический ответ да н
 npm -i packageName --global   // Глобальная установка пакетов
 npm -i packageName            // Локальная установка пакетов
 npm -i packageeName@1.8.2     // Установка определенной версии после @
+npm install                   // Установка пакетов из package.json
+npm install pakcageName --save// Сохранение пакета в package.json при установке
 npm update packageName        // Обновление пакета
 npm list -g                   // Вывод списка глобально установленных пакетов
 npm list                      // Вывод списка локально
