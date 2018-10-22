@@ -110,9 +110,29 @@ m_dir() {
 }
 
 # ---------------------------
+# - Новый web проект        -
+# ---------------------------
+
+new_web() {
+  npm init --yes
+  t gulpfile.js
+  mkdir dist
+  mkdir app
+  mkdir node_modules
+  sd app
+  mkdir css
+  mkdir font
+  mkdir img
+  mkdir js
+  mkdir sass
+  t index.html
+  .
+}
+
+# ---------------------------
 # - Новый проект в phpStorm -
 # ---------------------------
-storm_new-project:() {
+storm_new-project() {
 	echo Storm project ${1:?} created!
 	mkdir .idea
 	echo '<?xml version="1.0" encoding="UTF-8"?>
@@ -377,6 +397,5 @@ storm_new-project:() {
     </entry>
   </component>
 </project>' > .idea/workspace.xml
-	t index.html
-	phpstorm64.exe index.html &
+	phpstorm64.exe &
 }
