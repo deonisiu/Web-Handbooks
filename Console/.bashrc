@@ -397,5 +397,6 @@ storm_new-project() {
     </entry>
   </component>
 </project>' > .idea/workspace.xml
-	phpstorm64.exe &
+	t gulpfile.js
+	phpstorm64.exe gulpfile.js &
 }
