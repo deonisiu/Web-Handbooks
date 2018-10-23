@@ -5,6 +5,7 @@
 
 * [Gulp site](https://gulpjs.com)
 * [Gulp docs](https://github.com/gulpjs/gulp/tree/v3.9.1/docs)
+* [Gulp плагины(sass, uglify, auto prefixer)](https://www.npmjs.com/search?q=keywords:gulpplugin)
 * [Gulp рецепты для обычного использования](https://github.com/gulpjs/gulp/tree/v3.9.1/docs/recipes#recipes)
 
 ## Навигация по странице
