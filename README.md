@@ -7,6 +7,8 @@
 * [HTTP/1.1 Semantic and Content](https://tools.ietf.org/html/rfc7231#page-3)
 * [BrowserSync](https://browsersync.io)
 
+* [Visually-hidden](https://github.com/deonisiu/Web-Handbooks#visually-hidden)
+
 ___
 ## Разделы
 
