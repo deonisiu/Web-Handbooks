@@ -49,23 +49,7 @@ ___
 ---
 ## Общая структура проекта
 
-- project/
-  - app/
-    - css/
-    - fonts/
-    - img/
-    - js/
-    - sass/
-      - blocks/
-        - block-name.scss
-      - style.scss
-      - mixins.scss
-      - variables.scss
-    - index.html
-  - dist/
-  - node_modules/
-  - gulpfile.js
-  - package.json
+![project-template](project-template.jpg)
 
 ---
 ## Visually hidden
