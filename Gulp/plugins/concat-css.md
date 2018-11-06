@@ -1,14 +1,14 @@
 # Gulp-Concat-Css plugin
 
-### Описание
+## Описание
 
 Плагин для объединения двух css файлов в один
 
-### Install
+## Install
 
 `npm install --save-dev gulp-concat-css`
 
-### Example
+## Example
 
 ```js
 var concatCss = requare('gulp-concat-css');
@@ -20,7 +20,7 @@ gulp.task('default', function () {
 });
 ```
 
-### API
+## API
 
 concatCss(targetFile, options)
 
