@@ -10,7 +10,8 @@
 
 ## Полезные плагины
 
-* [Gulp-Concat-Css](/plugins/concat-css.md)
+* [Gulp-Concat-Css](plugins/concat-css.md)
+* [Gulp-Clean-Css](plugins/clean-css.md)
 
 ## Навигация по странице
 * [Подключение Gulp](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#Подключение-gulp)
