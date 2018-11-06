@@ -8,6 +8,10 @@
 * [Gulp плагины(sass, uglify, auto prefixer)](https://www.npmjs.com/search?q=keywords:gulpplugin)
 * [Gulp рецепты для обычного использования](https://github.com/gulpjs/gulp/tree/v3.9.1/docs/recipes#recipes)
 
+## Полезные плагины
+
+* [Gulp-Concat-Css](/plugins/concat-css.md)
+
 ## Навигация по странице
 * [Подключение Gulp](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#Подключение-gulp)
 * [gulp.src](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#gulpsrcglobs-options)
@@ -26,7 +30,9 @@ Gulp - это инструмент, который помогает автома
 
 Любой проект, использующий Gulp имеет в корне файл ***gulpfile.js***, который содержит набор инструкций по управлению проектом.
 
-Установка в терминале:
+Все инструкции для Gulp плагинов прописываются в файле ***gulpfile.js***
+
+### Установка в терминале:
 
 Глобальная установка
 ```console
