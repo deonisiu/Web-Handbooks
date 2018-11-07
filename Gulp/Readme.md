@@ -12,6 +12,13 @@
 
 * [Gulp-Concat-Css](plugins/concat-css.md)
 * [Gulp-Clean-Css](plugins/clean-css.md)
+* [Gulp-Rename](plugins/rename.md)
+* [Gulp-Notify](plugins/notify.md)
+* [Gulp-Connect](plugins/connect.md)
+* [Gulp-Sass](plugins/sass.md)
+* [Gulp-Autoprefixer](plugins/autoprefixer.md)
+* [Gulp-Livereload](plugins/livereload.md)
+* [Gulp-UnCss](plugins/uncss.md)
 
 ## Навигация по странице
 * [Подключение Gulp](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#Подключение-gulp)
