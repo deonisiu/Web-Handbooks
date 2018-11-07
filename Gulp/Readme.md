@@ -10,6 +10,7 @@
 
 ## Полезные плагины
 
+* [Browser-Sync](plugins/browser-sync.md)
 * [Gulp-Concat-Css](plugins/concat-css.md)
 * [Gulp-Clean-Css](plugins/clean-css.md)
 * [Gulp-Rename](plugins/rename.md)
