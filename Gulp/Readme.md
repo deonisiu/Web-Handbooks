@@ -8,6 +8,7 @@
 * [Gulp плагины(sass, uglify, auto prefixer)](https://www.npmjs.com/search?q=keywords:gulpplugin)
 * [Gulp рецепты для обычного использования](https://github.com/gulpjs/gulp/tree/v3.9.1/docs/recipes#recipes)
 
+---
 ## Полезные плагины
 
 * [Browser-Sync](plugins/browser-sync.md)
@@ -21,6 +22,7 @@
 * [Gulp-Livereload](plugins/livereload.md)
 * [Gulp-UnCss](plugins/uncss.md)
 
+---
 ## Навигация по странице
 * [Подключение Gulp](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#Подключение-gulp)
 * [gulp.src](https://github.com/deonisiu/Web-Handbooks/tree/master/Gulp#gulpsrcglobs-options)
@@ -41,6 +43,18 @@ Gulp - это инструмент, который помогает автома
 
 Все инструкции для Gulp плагинов прописываются в файле ***gulpfile.js***
 
+---
+### Шаблон выборки файлов (glob)[https://en.wikipedia.org/wiki/Glob_(programming)]
+Самые распространенные шаблоны выборки:
+- \*.sass - выбирает все файлы, имеющие определенное расширение (в данном случае .sass)
+
+- \*\*/\*.js - выбирает все файлы с расширением .js во всех папках проекта
+
+- !header.sass - исключает файл из общей выборки
+
+- \*.+(scss|sass) - задает комплексный шаблон для несколких типов файлов, разделенных вертикальной чертой. В данном примере в выборку попадут любые sass и scss файлы в корне проекта.
+
+---
 ### Установка в терминале:
 
 Глобальная установка
@@ -76,6 +90,7 @@ Gulp имеет 4 основных команды:
 - gulp.task
 - gulp.watch
 
+---
 ### gulp.src(globs[, options])
 ***gulp.src*** - Выдает файлы из glob запроса или массива glob запросов. Возвращает поток [Виниловых файлов](https://github.com/gulpjs/vinyl-fs), которые могут быть переданы плагинам.
 
@@ -117,6 +132,7 @@ gulp.src('client/js/**/*.js', { base: 'client' })
   .pipe(gulp.dest('build'));  // Writes 'build/js/somedir/somefile.js'
 ```
 
+---
 ### gulp.dest[(path[, options]) - Параметры подробнее](https://github.com/gulpjs/gulp/blob/v3.9.1/docs/API.md#path)
 ***gulp.dest*** - Передает результатирующие данные в `path`, после применения различных плагинов(sass, minify и тд). Передача через `.pipe`:
 ```js
@@ -134,6 +150,7 @@ gulp.src('./client/templates/*.jade')
 
 Путь записи определяется добавлением относительного пути к заданному каталогу.
 
+---
 ### gulp.task[(name [, deps, fn]) - Параметры подробнее](https://github.com/gulpjs/gulp/blob/v3.9.1/docs/API.md#name)
 ***gulp.task*** - Выполняет задачу(task) при помощи [Orchestrator](https://github.com/robrich/orchestrator)  
 ***Orchestrator*** - Модуль для последовательных и исполняемых задач и зависимостей в максимальной параллельности.
@@ -164,6 +181,7 @@ gulp.task('buildStuff', function() {
   });
 ```
 
+---
 ### gulp.watch(glob [, opts], tasks) or gulp.watch(glob [, opts, cb])
 ***gulp.watch*** - Следит за файлами из glob и выполняет свою основную логику, если файлы наблюдения меняются.  
 Всегда возвращает EventEmitter, который говорит о событиях изменений.
