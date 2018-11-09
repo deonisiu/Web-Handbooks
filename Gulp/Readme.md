@@ -25,7 +25,7 @@
 * [Gulp-Concat](plugins/concat.md)
 * [Gulp-Uglify](plugins/uglify.md)
 * [Gulp-Cache](plugins/cache.md)
----
+
 Оптимизация изображений
 * [Gulp-imagemin + imagemin-pngquant](plugins/imagemin.md)
 
