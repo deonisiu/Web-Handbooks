@@ -36,6 +36,7 @@ ___
 ### Автоматизация
 * [NPM](Npm/)
 * [Gulp](Gulp/)
+* [Bower](Bower/)
 
 ### Unsorted
 * [HTTP-REST - пустой](HTTP-REST/)
