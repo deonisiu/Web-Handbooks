@@ -21,6 +21,8 @@
 * [Gulp-Autoprefixer](plugins/autoprefixer.md)
 * [Gulp-Livereload](plugins/livereload.md)
 * [Gulp-UnCss](plugins/uncss.md)
+* [Gulp-Concat](plugins/concat.md)
+* [Gulp-Uglify](plugins/uglify.md)
 
 ---
 ## Навигация по странице
