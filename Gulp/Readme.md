@@ -11,6 +11,7 @@
 ---
 ## Полезные плагины
 
+* [Del](plugins/del.md) - плагин для удаления файлов и папок
 * [Browser-Sync](plugins/browser-sync.md)
 * [Gulp-Concat-Css](plugins/concat-css.md)
 * [Gulp-Clean-Css](plugins/clean-css.md)
@@ -23,6 +24,10 @@
 * [Gulp-UnCss](plugins/uncss.md)
 * [Gulp-Concat](plugins/concat.md)
 * [Gulp-Uglify](plugins/uglify.md)
+* [Gulp-Cache](plugins/cache.md)
+---
+Оптимизация изображений
+* [Gulp-imagemin + imagemin-pngquant](plugins/imagemin.md)
 
 ---
 ## Навигация по странице
