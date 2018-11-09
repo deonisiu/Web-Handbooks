@@ -2,7 +2,7 @@
 
 ## Описание
 
-Плагин для объединения двух css файлов в один
+Плагин для объединения нескольких css файлов в один
 
 ## Install
 
@@ -30,3 +30,37 @@ concatCss(targetFile, options)
   - rebaseUrls: (default true) Adjust any relative URL to the location of the target file.
   - includePaths: (default []) Include additional paths when inlining imports
   - commonBase: (default to the base property of the first file) Common base path from wich resolving files and urls
+
+---
+## Разница между ***concat*** и ***concat-css*** плагинами
+
+При обработки исходных файлов с кодом :
+
+1 файл
+```css
+body {
+  background-color: red; }
+```
+2 файл
+```css
+h1 { font-size: 42px; }
+```
+
+***Concat*** выдаст общий файл вида:
+```css
+body {
+  background-color: red; }
+
+h1 { font-size: 42px; }
+```
+
+***Concat-css*** выдаст общий файл вида:
+```css
+body {
+  background-color: red; 
+}
+
+h1 { 
+  font-size: 42px; 
+}
+```
