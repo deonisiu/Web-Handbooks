@@ -31,12 +31,13 @@ ___
 * [БЭМ методология](BEM/)
 * [Bootstrap](Bootstrap/)
 * [Sass/scss](Sass/)
+* [PostCSS](PostCSS/)
 ---
 
 ### Автоматизация
 * [NPM](Npm/)
 * [Gulp](Gulp/)
-* [Bower](Bower/)
+* [Bower(deprecated)](Bower/)
 
 ### Unsorted
 * [HTTP-REST - пустой](HTTP-REST/)
