@@ -7,7 +7,7 @@ PROMPT_COMMAND="
 alias c='clear'
 alias ll='ls -l'
 alias x='exit'
-alias ls='ls -S -1 --color -A -F --group-directories-first'
+alias ls='ls -S -1 --color -A -F --group-directories-first | sort'
 alias t='touch'
 
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
