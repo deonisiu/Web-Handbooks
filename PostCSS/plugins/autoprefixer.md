@@ -1,4 +1,4 @@
-# Gulp-Autoprefixer [plugin](https://www.npmjs.com/package/autoprefixer)
+# Autoprefixer [plugin](https://www.npmjs.com/package/autoprefixer)
 
 ## Описание
 
