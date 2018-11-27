@@ -1,7 +1,12 @@
 PROMPT_COMMAND="
-	ConEmuC -StoreCWD;
-	echo -en '\033[37;1;41m ------------ \033[0m\n';
-	ls"
+  echo -en '\033[37;1;41m ------------ \033[0m\n';
+  ls"
+#c;
+
+#PROMPT_COMMAND="
+#  ConEmuC -StoreCWD;
+#  echo -en '\033[37;1;41m ------------ \033[0m\n';
+#  ls"
 #c;
 
 alias c='clear'
@@ -15,6 +20,7 @@ PATH=$PATH:'/c/Program Files/Notepad++' $*
 PATH=$PATH:'/e/PHP/PhpStorm 2017.1.4/bin' $*
 PATH=$PATH:'/e/JavaScript/WebStorm 2017.1/bin' $*
 PATH=$PATH:'/c/Program Files/Opera' $*
+PATH=$PATH:'/e/Microsoft VS Code' $*
 
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -48,37 +54,49 @@ alias g_space='git diff --check'
 alias g_move='git reset'
 
 add_branch() {
-	gr add $1 $2
+  gr add $1 $2
 }
 
 .bashrc() {
-	subl ~/.bashrc
+  subl ~/.bashrc
+  subl /e/Projects/git_projects/Web-Handbooks/Console/.bashrc
+}
+
+# Отработка условия существования файла в переменной $1
+.vs() {
+  if [ -f $1 ]; 
+  then
+    Code $1 &
+  else
+    t $*
+    Code $* &
+  fi
 }
 
 .gitconf() {
-	subl ~/.gitconfig
+  subl ~/.gitconfig
 }
 
 opera() {
-	opera.exe $* &
+  opera.exe $* &
 }
 
 storm() {
-	phpstorm64.exe $* &
+  phpstorm64.exe $* &
 }
 
 web_storm() {
-	webstorm64.exe $* &
+  webstorm64.exe $* &
 }
 
 t_subl() {
-	t $*
-	subl $*
+  t $*
+  subl $*
 }
 
 t_pstorm() {
-	t $*
-	phpstorm64.exe $* &
+  t $*
+  phpstorm64.exe $* &
 }
 
 sd(){
@@ -94,19 +112,19 @@ localhost(){
 }
 
 download() {
-	cd /d/downloadWORK
+  cd /d/downloadWORK
 }
 
 books() {
-	cd /e/books
+  cd /e/books
 }
 
 home() {
-	cd /e/Projects
+  cd /e/Projects
 }
 
 m_dir() {
-	mkdir $*
+  mkdir $*
 }
 
 # ---------------------------
@@ -133,27 +151,27 @@ new_web() {
 # - Новый проект в phpStorm -
 # ---------------------------
 storm_new-project() {
-	echo Storm project ${1:?} created!
-	mkdir .idea
-	echo '<?xml version="1.0" encoding="UTF-8"?>
-	<project version="4">
-	  <component name="ProjectModuleManager">
-	    <modules>
-	      <module fileurl="file://$PROJECT_DIR$/.idea/'$1'.iml" filepath="$PROJECT_DIR$/.idea/'$1'.iml" />
-	    </modules>
-	  </component>
-	</project>' > .idea/modules.xml
+  echo Storm project ${1:?} created!
+  mkdir .idea
+  echo '<?xml version="1.0" encoding="UTF-8"?>
+  <project version="4">
+    <component name="ProjectModuleManager">
+      <modules>
+        <module fileurl="file://$PROJECT_DIR$/.idea/'$1'.iml" filepath="$PROJECT_DIR$/.idea/'$1'.iml" />
+      </modules>
+    </component>
+  </project>' > .idea/modules.xml
 
-	echo '<?xml version="1.0" encoding="UTF-8"?>
-	<module type="WEB_MODULE" version="4">
-	  <component name="NewModuleRootManager">
-	    <content url="file://$MODULE_DIR$" />
-	    <orderEntry type="inheritedJdk" />
-	    <orderEntry type="sourceFolder" forTests="false" />
-	  </component>
-	</module>' > .idea/$1.iml
+  echo '<?xml version="1.0" encoding="UTF-8"?>
+  <module type="WEB_MODULE" version="4">
+    <component name="NewModuleRootManager">
+      <content url="file://$MODULE_DIR$" />
+      <orderEntry type="inheritedJdk" />
+      <orderEntry type="sourceFolder" forTests="false" />
+    </component>
+  </module>' > .idea/$1.iml
 
-	echo '<?xml version="1.0" encoding="UTF-8"?>
+  echo '<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5569a7a7-73ee-4dc0-aec9-3ca6bba507ca" name="Default" comment="" />
@@ -397,6 +415,6 @@ storm_new-project() {
     </entry>
   </component>
 </project>' > .idea/workspace.xml
-	t gulpfile.js
-	phpstorm64.exe gulpfile.js &
+  t gulpfile.js
+  phpstorm64.exe gulpfile.js &
 }
