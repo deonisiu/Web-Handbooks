@@ -1,13 +1,7 @@
 PROMPT_COMMAND="
+  ConEmuC -StoreCWD;
   echo -en '\033[37;1;41m ------------ \033[0m\n';
   ls"
-#c;
-
-#PROMPT_COMMAND="
-#  ConEmuC -StoreCWD;
-#  echo -en '\033[37;1;41m ------------ \033[0m\n';
-#  ls"
-#c;
 
 alias c='clear'
 alias ll='ls -l'
@@ -52,6 +46,8 @@ alias g_find='git grep'
 alias g_rev='git revert'
 alias g_space='git diff --check'
 alias g_move='git reset'
+
+temp='/e/temp'
 
 add_branch() {
   gr add $1 $2
@@ -107,6 +103,10 @@ sd(){
   cd ..
 }
 
+upl() {
+  exec bash
+}
+
 localhost(){
   cd /e/OpenServer/OSPanel/domains/localhost
 }
@@ -121,6 +121,10 @@ books() {
 
 home() {
   cd /e/Projects
+}
+
+desk() {
+  cd ~/Desktop
 }
 
 m_dir() {
