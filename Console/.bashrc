@@ -46,6 +46,7 @@ alias g_find='git grep'
 alias g_rev='git revert'
 alias g_space='git diff --check'
 alias g_move='git reset'
+alias g_firstPush='git push --set-upstream' $1 $2
 
 temp='/e/temp'
 
