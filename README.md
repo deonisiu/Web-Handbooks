@@ -38,6 +38,7 @@ ___
 * [NPM](Npm/)
 * [Gulp](Gulp/)
 * [Bower(deprecated)](Bower/)
+* [EditorConfig](EditorConfig/)
 
 ### Unsorted
 * [HTTP-REST - пустой](HTTP-REST/)
