@@ -79,7 +79,15 @@ opera() {
 }
 
 storm() {
-  phpstorm64.exe $* &
+  if [ -f "gulpfile.js" ]; then 
+    phpstorm64.exe gulpfile.js &
+  else 
+    if [[ -f $* && $* ]]; then
+      phpstorm64.exe $* &
+    else
+      echo "Ошибка: файл не найден!"
+    fi
+  fi
 }
 
 web_storm() {
@@ -150,6 +158,7 @@ new_web() {
   mkdir sass
   t index.html
   .
+  storm_new-project $1
 }
 
 # ---------------------------
