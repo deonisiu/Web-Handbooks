@@ -13,6 +13,7 @@
 
 * [Del](plugins/del.md) - плагин для удаления файлов и папок
 * [Browser-Sync](plugins/browser-sync.md)
+* [Gulp-StyleLint](plugins/stylelint.md)
 * [Gulp-Concat-Css](plugins/concat-css.md)
 * [Gulp-Clean-Css](plugins/clean-css.md)
 * [Gulp-Rename](plugins/rename.md)
