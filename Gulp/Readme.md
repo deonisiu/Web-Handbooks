@@ -1,4 +1,24 @@
-# Gulp
+# Gulp ver. 3.9.1
+
+Gulp 3.9.1 + Browser-sync in ***gulpfile.js***:
+```js
+var gulp = require('gulp'),
+    browserSync = require('browser-sync').create();
+
+gulp.task("browser-sync", function () {
+    browserSync.init({
+        server: {
+            baseDir: 'app'
+        },
+        notify: false
+    });
+});
+
+gulp.task("watch", ['browser-sync'], function () {
+    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/css/*.css', browserSync.reload);
+});
+```
 
 ---
 ## Полезные ссылки
@@ -11,21 +31,24 @@
 ---
 ## Полезные плагины
 
-* [Del](plugins/del.md) - плагин для удаления файлов и папок
+***Основные*** :
 * [Browser-Sync](plugins/browser-sync.md)
 * [Gulp-StyleLint](plugins/stylelint.md)
 * [Gulp-Concat-Css](plugins/concat-css.md)
 * [Gulp-Clean-Css](plugins/clean-css.md)
+* [Gulp-Sass](plugins/sass.md)
+
+***Опциональные*** :
 * [Gulp-Rename](plugins/rename.md)
 * [Gulp-Notify](plugins/notify.md)
 * [Gulp-Connect](plugins/connect.md)
-* [Gulp-Sass](plugins/sass.md)
 * [Gulp-Autoprefixer](plugins/autoprefixer.md)
 * [Gulp-Livereload](plugins/livereload.md)
 * [Gulp-UnCss](plugins/uncss.md)
 * [Gulp-Concat](plugins/concat.md)
 * [Gulp-Uglify](plugins/uglify.md)
 * [Gulp-Cache](plugins/cache.md)
+* [Del](plugins/del.md) - плагин для удаления файлов и папок
 
 Оптимизация изображений
 * [Gulp-imagemin + imagemin-pngquant](plugins/imagemin.md)
@@ -89,6 +112,21 @@ var gulp = require("gulp");
 ```
 
 Так мы подключаем Gulp к проекту, через функцию require. Данная функция подключает пакеты из папки ***node_modules***.
+
+---
+### Общая схема использования
+
+```js
+gulp.task('mytask', function () {
+  return gulp.src('source-files') // Выборка исходных файлов для обработки плагином
+    .pipe(plugin()) // Вызов Gulp плагина для обработки файла
+    .pipe(gulp.dest('folder')) // Вывод результирующего файла в папку назначения (dest - пункт назначения)
+})
+```
+
+* ***gulp.src*** - выборка исходных файлов проекта для обработки плагином
+* ***.pipe(plugin())*** - вызов Gulp плагина для обработки файла
+* ***.pipe(gulp.dest('folder'))*** - вывод результирующего файла в папку назначения (dest - пункт назначения)
 
 ---
 ### Gulp API docs
