@@ -129,6 +129,25 @@ gulp.task('mytask', function () {
 * ***.pipe(gulp.dest('folder'))*** - вывод результирующего файла в папку назначения (dest - пункт назначения)
 
 ---
+### Gulp.watch: ловим ошибки правильно [Источник](https://habr.com/post/259225/)
+
+Чтобы watch продолжал работать после ошибки : 
+```js
+gulp.task('less', function(done) {
+  gulp.src('less/*.less')
+    .pipe(less().on('error', function(error) {
+      // у нас ошибка
+      done(error);
+    }))
+    .pipe(gulp.dest('app/css'))
+    .on('end', function() {
+      // у нас все закончилось успешно
+      done();
+    });
+});
+```
+
+---
 ### Gulp API docs
 Gulp имеет 4 основных команды:
 - gulp.src
