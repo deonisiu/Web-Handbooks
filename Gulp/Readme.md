@@ -1,5 +1,8 @@
 # Gulp ver. 3.9.1
 
+---
+## Готовый [***gulpfile.js***](gulpfile.md)
+
 Gulp 3.9.1 + Browser-sync in ***gulpfile.js***:
 ```js
 var gulp = require('gulp'),
