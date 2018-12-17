@@ -11,7 +11,7 @@ gulp.task('sass', function () {
     return gulp.src("app/sass/**/*.scss")
         .pipe(sass().on('error', function ( error ) {
             console.log("----------------");
-            console.log("Sass error" + error.message);
+            console.log("SASS ERROR : " + error.message);
         }))
         .pipe(gulp.dest("app/css"))
 });
