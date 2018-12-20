@@ -95,12 +95,19 @@
 ### Шпаргалка по порядку свойств
 ```css
 .class {
-  /* Позиционирование: position, top-left, z-index */
-  /* Блочная модель: display, float, width, height, margin, padding, box-sizing */
-  /* Типографика: font, line-height, text-align, color */
-  /* Оформление: background-color, border, border-radius, opacity */
-  /* Анимация: transform, transition */
-  /* Разное: will-change */
+  /* Positioning: position, top-left, z-index */
+  /* ---------- */
+  /* Block model: display, float */
+  /* ---------- */
+  /* Size: width, height, margin, padding, box-sizing */
+  /* ---------- */
+  /* Typography: font, line-height, text-align, color */
+  /* ---------- */
+  /* Design: background-color, border(radius), opacity */
+  /* ---------- */
+  /* Animation: transform, transition */
+  /* ---------- */
+  /* Other: will-change */
 }
 ```
 
