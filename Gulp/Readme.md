@@ -39,16 +39,16 @@ gulp.task("watch", ['browser-sync'], function () {
 ## Полезные плагины
 
 ***Основные*** :
-* [Browser-Sync](plugins/browser-sync.md)
-* [Gulp-StyleLint](plugins/stylelint.md)
-* [Gulp-Concat-Css](plugins/concat-css.md)
-* [Gulp-Clean-Css](plugins/clean-css.md)
+* [Browser-Sync](plugins/browser-sync.md) - обновление в real-time
+* [Gulp-StyleLint](plugins/stylelint.md) - css линтер
+* [Gulp-Clean-Css](plugins/clean-css.md) - минификация
 * [Gulp-Sass](plugins/sass.md)
-* [Gulp-Watch](plugins/gulp-watch.md)
-* [Gulp-Sequence](plugins/gulp-sequence.md) - последовательные tasks
+* [Gulp-Watch](plugins/gulp-watch.md) - watcher изменений + create|delet
 * [Del](plugins/del.md) - плагин для удаления файлов и папок
 
 ***Опциональные*** :
+* [Gulp-Concat-Css](plugins/concat-css.md)
+* [Gulp-Sequence](plugins/gulp-sequence.md) - последовательные tasks
 * [Gulp-Rename](plugins/rename.md)
 * [Gulp-Notify](plugins/notify.md)
 * [Gulp-Connect](plugins/connect.md)
