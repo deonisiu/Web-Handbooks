@@ -15,6 +15,7 @@ ___
 ## Разделы
 
 ### Среда
+* [PhpStorm 2017.1.4](PhpStorm/)
 * [Sublime text 3](Sublime/)
 * [Console, Bash, Vim](Console/)
 * [Git, markdown](Git/)
