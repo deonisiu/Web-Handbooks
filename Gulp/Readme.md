@@ -1,6 +1,10 @@
 # Gulp ver. 3.9.1
 
 ---
+## Почитать
+* [Генерация CSS-спрайтов с Gulp](https://habr.com/post/227945/)
+
+---
 ## Готовый [***gulpfile.js***](gulpfile.md)
 
 Gulp 3.9.1 + Browser-sync in ***gulpfile.js***:
@@ -40,6 +44,9 @@ gulp.task("watch", ['browser-sync'], function () {
 * [Gulp-Concat-Css](plugins/concat-css.md)
 * [Gulp-Clean-Css](plugins/clean-css.md)
 * [Gulp-Sass](plugins/sass.md)
+* [Gulp-Watch](plugins/gulp-watch.md)
+* [Gulp-Sequence](plugins/gulp-sequence.md) - последовательные tasks
+* [Del](plugins/del.md) - плагин для удаления файлов и папок
 
 ***Опциональные*** :
 * [Gulp-Rename](plugins/rename.md)
@@ -51,7 +58,6 @@ gulp.task("watch", ['browser-sync'], function () {
 * [Gulp-Concat](plugins/concat.md)
 * [Gulp-Uglify](plugins/uglify.md)
 * [Gulp-Cache](plugins/cache.md)
-* [Del](plugins/del.md) - плагин для удаления файлов и папок
 
 Оптимизация изображений
 * [Gulp-imagemin + imagemin-pngquant](plugins/imagemin.md)
