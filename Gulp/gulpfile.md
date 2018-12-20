@@ -8,12 +8,16 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create();
 
 // Отслеживание изменений в SCSS .html style.css
+// ---
+// Внутри watch добавляется конструкцич {usePolling:true}
+// позволяющая не увеличивать время выполнения таска
+// ---
 gulp.task('stream', ['browser-sync'], function () {
-    watch('app/sass/**/*.scss', function () {
+    watch('app/sass/**/*.scss', {usePolling:true}, function () {
         gulp.start('sass');
     });
-    watch('app/*.html', browserSync.reload);
-    watch('app/css/style.css', browserSync.reload);
+    watch('app/*.html', {usePolling:true}, browserSync.reload);
+    watch('app/css/style.css', {usePolling:true}, browserSync.reload);
 });
 
 gulp.task('sass', function () {
