@@ -6,6 +6,15 @@
 
 Плагин для наблюдения за файлами (срабатывает при удалении и создании файлов)
 
+***ВАЖНО*** : Gulp-Watch использует [chokidar](https://github.com/paulmillr/chokidar), если при использовании не добавить опцию `{usePolling:true}`, то время выполнения тасков может ***постоянно увеличиваться***. Пример:
+```js
+watch('app/sass/**/*.scss', {usePolling:true}, function () {
+    gulp.start('sass');
+});
+```
+
+Статья на [Тостере](https://toster.ru/q/380260) о проблеме времени выполнения
+
 ## Install
 
 `npm install --save-dev gulp-watch`
