@@ -1,12 +1,9 @@
 # PhpStorm (редактор кода от JetBrains)
 
 ---
-## Полезные плагины
+## Полезные сочетания клавиш
 
-* [FavoriteFolders](https://plugins.jetbrains.com/plugin/5940-favoritefolders) - Добавляет избранные папки в FileChooser окно
-Настройка :
-![img1](img/FavoriteFolder1.png)
-![img2](img/FavoriteFolder2.png)
+* Ctrl + Shift + U -> Перевод выделенного текста в Uppercase или LowerCase
 
 ---
 ## Пользовательские настройки
@@ -33,3 +30,11 @@
 
 * EditorConfig
 * FavoriteFolders
+
+---
+## Полезные плагины
+
+* [FavoriteFolders](https://plugins.jetbrains.com/plugin/5940-favoritefolders) - Добавляет избранные папки в FileChooser окно
+Настройка :
+![img1](img/FavoriteFolder1.png)
+![img2](img/FavoriteFolder2.png)
