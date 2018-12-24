@@ -18,6 +18,7 @@ gulp.task('stream', ['browser-sync'], function () {
     });
     watch('app/*.html', {usePolling:true}, browserSync.reload);
     watch('app/css/style.css', {usePolling:true}, browserSync.reload);
+    watch('app/js/**/*.js', {usePolling:true}, browserSync.reload);
 });
 
 gulp.task('sass', function () {
