@@ -49,6 +49,7 @@ gulp.task("watch", ['browser-sync'], function () {
 * [Gulp-Sass](plugins/sass.md)
 * [Gulp-Watch](plugins/gulp-watch.md) - watcher изменений + create|delet
 * [Gulp-Minify](plugins/gulp-minify.md) - минификация javascript с [terser](https://www.npmjs.com/package/terser)
+* [Gulp-Concat](plugins/concat.md) - объединение файлов в один общий
 
 ***Опциональные*** :
 * [Gulp-Concat-Css](plugins/concat-css.md) - объединение CSS файлов в один
@@ -59,7 +60,6 @@ gulp.task("watch", ['browser-sync'], function () {
 * [Gulp-Autoprefixer](plugins/autoprefixer.md) - автопрефиксер
 * [Gulp-Livereload](plugins/livereload.md) - авто обновление страниц для Gulp-Connect
 * [Gulp-UnCss](plugins/uncss.md) - удалением неиспользуемых стилей
-* [Gulp-Concat](plugins/concat.md) - объединение файлов в один общий
 * [Gulp-Uglify](plugins/uglify.md) - сжатие js файлов
 * [Gulp-Cache](plugins/cache.md) - кеширование для gulp-imagemin
 * [Del](plugins/del.md) - плагин для удаления файлов и папок
