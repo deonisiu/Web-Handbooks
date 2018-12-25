@@ -48,7 +48,7 @@ gulp.task("watch", ['browser-sync'], function () {
 * [Gulp-Clean-Css](plugins/clean-css.md) - минификация
 * [Gulp-Sass](plugins/sass.md)
 * [Gulp-Watch](plugins/gulp-watch.md) - watcher изменений + create|delet
-* [Gulp-Minify](plugins/gulp-minify) - минификация javascript с [terser](https://www.npmjs.com/package/terser)
+* [Gulp-Minify](plugins/gulp-minify.md) - минификация javascript с [terser](https://www.npmjs.com/package/terser)
 
 ***Опциональные*** :
 * [Gulp-Concat-Css](plugins/concat-css.md) - объединение CSS файлов в один
