@@ -38,26 +38,31 @@ gulp.task("watch", ['browser-sync'], function () {
 ---
 ## Полезные плагины
 
+***Изучить*** :
+* [Terser](https://www.npmjs.com/package/terser)
+* [Gulp-rev](https://www.npmjs.com/package/gulp-rev)
+
 ***Основные*** :
 * [Browser-Sync](plugins/browser-sync.md) - обновление в real-time
 * [Gulp-StyleLint](plugins/stylelint.md) - css линтер
 * [Gulp-Clean-Css](plugins/clean-css.md) - минификация
 * [Gulp-Sass](plugins/sass.md)
 * [Gulp-Watch](plugins/gulp-watch.md) - watcher изменений + create|delet
-* [Del](plugins/del.md) - плагин для удаления файлов и папок
+* [Gulp-Minify](plugins/gulp-minify) - минификация javascript с [terser](https://www.npmjs.com/package/terser)
 
 ***Опциональные*** :
-* [Gulp-Concat-Css](plugins/concat-css.md)
+* [Gulp-Concat-Css](plugins/concat-css.md) - объединение CSS файлов в один
 * [Gulp-Sequence](plugins/gulp-sequence.md) - последовательные tasks
-* [Gulp-Rename](plugins/rename.md)
-* [Gulp-Notify](plugins/notify.md)
-* [Gulp-Connect](plugins/connect.md)
-* [Gulp-Autoprefixer](plugins/autoprefixer.md)
-* [Gulp-Livereload](plugins/livereload.md)
-* [Gulp-UnCss](plugins/uncss.md)
-* [Gulp-Concat](plugins/concat.md)
-* [Gulp-Uglify](plugins/uglify.md)
-* [Gulp-Cache](plugins/cache.md)
+* [Gulp-Rename](plugins/rename.md) - переименование файлов
+* [Gulp-Notify](plugins/notify.md) - уведомления для gulp
+* [Gulp-Connect](plugins/connect.md) - веб-сервер с использованием LiveReload
+* [Gulp-Autoprefixer](plugins/autoprefixer.md) - автопрефиксер
+* [Gulp-Livereload](plugins/livereload.md) - авто обновление страниц для Gulp-Connect
+* [Gulp-UnCss](plugins/uncss.md) - удалением неиспользуемых стилей
+* [Gulp-Concat](plugins/concat.md) - объединение файлов в один общий
+* [Gulp-Uglify](plugins/uglify.md) - сжатие js файлов
+* [Gulp-Cache](plugins/cache.md) - кеширование для gulp-imagemin
+* [Del](plugins/del.md) - плагин для удаления файлов и папок
 
 Оптимизация изображений
 * [Gulp-imagemin + imagemin-pngquant](plugins/imagemin.md)
