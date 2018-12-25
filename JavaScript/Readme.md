@@ -12,13 +12,10 @@
 
 Где :
 * start.js - начальный файл общей сборки
-
 * script(folder) - общая папка для всех скриптов
-
 * winOnload(folder) - папка для заполнения фун-и window.onload
-* onloadStart.js - файл начала фун-и window.onload
-* onloadEnd.js - файл конца фун-и window.onload
-
+	1. onloadStart.js - файл начала фун-и window.onload
+	2. onloadEnd.js - файл конца фун-и window.onload
 * end.js - конечный файл общей сборки
 
 ## Полезные ссылки
