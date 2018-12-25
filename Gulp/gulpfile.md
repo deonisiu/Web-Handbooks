@@ -3,13 +3,13 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     cleanCss = require('gulp-clean-css'),
-    del = require('del'),
     watch = require('gulp-watch'),
+    concat = require('gulp-concat'),
     browserSync = require('browser-sync').create();
 
-// Отслеживание изменений в SCSS .html style.css
+// Отслеживание изменений в SCSS .html style.css .js
 // ---
-// Внутри watch добавляется конструкцич {usePolling:true}
+// Внутри watch добавляется конструкция {usePolling:true}
 // позволяющая не увеличивать время выполнения таска
 // ---
 gulp.task('stream', ['browser-sync'], function () {
@@ -19,6 +19,15 @@ gulp.task('stream', ['browser-sync'], function () {
     watch('app/*.html', {usePolling:true}, browserSync.reload);
     watch('app/css/style.css', {usePolling:true}, browserSync.reload);
     watch('app/js/**/*.js', {usePolling:true}, browserSync.reload);
+    watch(['app/js/start.js', 'app/js/scripts/**/*.js', 'app/js/end.js'], {usePolling:true}, function () {
+        gulp.start('concat-js');
+    });
+});
+
+gulp.task('concat-js', function () {
+    return gulp.src(['app/js/start.js', 'app/js/scripts/**/*.js', 'app/js/end.js'])
+        .pipe(concat('script.js'))
+        .pipe(gulp.dest('app/'));
 });
 
 gulp.task('sass', function () {
