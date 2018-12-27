@@ -149,9 +149,9 @@ new_web() {
   npm init --yes
   t gulpfile.js
   mkdir dist
-  mkdir app
+  mkdir src
   mkdir node_modules
-  sd app
+  sd src
   mkdir css
   mkdir font
   mkdir img
