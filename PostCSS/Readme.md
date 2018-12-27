@@ -33,7 +33,8 @@ gulp.task('css', function () {
 });
 ```
 * [Autoprefixer](plugins/autoprefixer.md)
-* [PreCSS](https://www.npmjs.com/package/precss)
+* [PreCSS](plugins/precss.md)
+* [CssNext](plugins/cssnext.md)
 * [PostCSS-assets](https://github.com/borodean/postcss-assets)
 
 ## Описание
