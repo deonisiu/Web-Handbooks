@@ -4,6 +4,7 @@
 ## Полезные сочетания клавиш
 
 * Ctrl + Shift + U -> Перевод выделенного текста в Uppercase или LowerCase
+* Ctrl + Alt + J -> Наложение шаблона на выделенный участок кода `<tag>SELECT</tag>`
 
 ---
 ## Пользовательские настройки
@@ -24,6 +25,11 @@
 ```
 
 * Settings -> Editor -> LiveTemplates -> ZenCSS -> Add : Abbreviation=@#, Description=prop_comments, ReformatAccordingToStyle=true, TemplateText="/* Positioning: posit..." (добавление быстрой команды для комментариев в CSS)
+
+* Settings -> Editor -> LiveTemplates -> ZenHtml -> Add : Abbreviation=viewport, Description=meta-viewport, ReformatAccordingToStyle=true, TemplateText=
+```html
+<meta name="viewport" content="width=device-width">
+```
 
 ---
 ## Список дополнительных плагинов
