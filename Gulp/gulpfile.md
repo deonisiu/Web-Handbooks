@@ -19,37 +19,37 @@ var gulp = require('gulp'),
 // позволяющая не увеличивать время выполнения таска
 // ---
 gulp.task('stream', ['browser-sync'], function () {
-    watch('app/sass/**/*.scss', {usePolling:true}, function () {
+    watch('src/sass/**/*.scss', {usePolling:true}, function () {
         gulp.start('sass');
     });
-    watch('app/*.html', {usePolling:true}, browserSync.reload);
+    watch('src/*.html', {usePolling:true}, browserSync.reload);
 
-    watch('app/css/style.css', {usePolling:true}, browserSync.reload);
-    watch('app/css/style.css', {usePolling:true}, function () {
+    watch('src/css/style.css', {usePolling:true}, browserSync.reload);
+    watch('src/css/style.css', {usePolling:true}, function () {
         gulp.start('autoprefixer');
     });
 
-    watch('app/js/**/*.js', {usePolling:true}, browserSync.reload);
-    watch(['app/js/start.js', 'app/js/scripts/**/*.js', 'app/js/end.js'], {usePolling:true}, function () {
+    watch('src/js/**/*.js', {usePolling:true}, browserSync.reload);
+    watch(['src/js/start.js', 'src/js/scripts/**/*.js', 'src/js/end.js'], {usePolling:true}, function () {
         gulp.start('concat-js');
     });
 });
 
 gulp.task('concat-js', function () {
-    return gulp.src(['app/js/start.js', 'app/js/scripts/**/*.js', 'app/js/end.js'])
+    return gulp.src(['src/js/start.js', 'src/js/scripts/**/*.js', 'src/js/end.js'])
         .pipe(concat('script.js'))
-        .pipe(gulp.dest('app/'));
+        .pipe(gulp.dest('src/js'));
 });
 
 gulp.task('sass', function () {
-    return gulp.src("app/sass/style.scss")
+    return gulp.src("src/sass/style.scss")
         .pipe(sass({outputStyle: 'expanded'})).on('error', sass.logError)
-        .pipe(gulp.dest("app/css"));
+        .pipe(gulp.dest("src/css"));
 });
 
 // Минификация css
 gulp.task('minify-css', function () {
-    return gulp.src("app/css/style.css")
+    return gulp.src("src/css/style.css")
         .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'));
 });
@@ -58,17 +58,38 @@ gulp.task('minify-css', function () {
 gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
-            baseDir: 'app'
+            baseDir: 'src'
         },
         notify: false
     });
 });
 
+gulp.task('build', ['buildhtml', 'buildcss', 'buildjs', 'buildimg']);
+
+// Build Html for dist folder
+gulp.task('buildhtml', function () {
+    return gulp.src("src/*.html")
+        .pipe(gulp.dest("dist"));
+});
+
 // AutoPrefixer for 2 last versions in browsers
-gulp.task('autoprefixer', function () {
-    return gulp.src('app/css/style.css')
+// + Minify CSS
+gulp.task('buildcss', function () {
+    return gulp.src('src/css/style.css')
         .pipe(postcss([ autoprefixer({browsers: ['last 2 version']}) ]))
+        .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'));
+});
+
+// Build JavaScript for dist folder
+gulp.task('buildjs', function () {
+    return gulp.src('src/js/script.js')
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('buildimg', function () {
+    return gulp.src('src/img/**')
+        .pipe(gulp.dest('dist/img'));
 });
 
 // Test Task for PostCSS
