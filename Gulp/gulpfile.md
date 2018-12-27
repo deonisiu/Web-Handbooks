@@ -5,6 +5,12 @@ var gulp = require('gulp'),
     cleanCss = require('gulp-clean-css'),
     watch = require('gulp-watch'),
     concat = require('gulp-concat'),
+
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cssnext = require('cssnext'),
+    precss = require('precss'),
+
     browserSync = require('browser-sync').create();
 
 // Отслеживание изменений в SCSS .html style.css .js
@@ -17,7 +23,12 @@ gulp.task('stream', ['browser-sync'], function () {
         gulp.start('sass');
     });
     watch('app/*.html', {usePolling:true}, browserSync.reload);
+
     watch('app/css/style.css', {usePolling:true}, browserSync.reload);
+    watch('app/css/style.css', {usePolling:true}, function () {
+        gulp.start('autoprefixer');
+    });
+
     watch('app/js/**/*.js', {usePolling:true}, browserSync.reload);
     watch(['app/js/start.js', 'app/js/scripts/**/*.js', 'app/js/end.js'], {usePolling:true}, function () {
         gulp.start('concat-js');
@@ -51,5 +62,25 @@ gulp.task('browser-sync', function () {
         },
         notify: false
     });
+});
+
+// AutoPrefixer for 2 last versions in browsers
+gulp.task('autoprefixer', function () {
+    return gulp.src('app/css/style.css')
+        .pipe(postcss([ autoprefixer({browsers: ['last 2 version']}) ]))
+        .pipe(gulp.dest('dist/css'));
+});
+
+// Test Task for PostCSS
+gulp.task('postcss', function () {
+    var processors = [
+        autoprefixer({browsers: ['last 5 version']}),
+        precss,
+        cssnext
+    ];
+
+    return gulp.src("test/style.css")
+        .pipe(postcss(processors))
+        .pipe(gulp.dest("test/out"));
 });
 ```
