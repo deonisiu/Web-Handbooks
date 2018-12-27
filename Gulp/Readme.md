@@ -52,8 +52,9 @@ gulp.task("watch", ['browser-sync'], function () {
 * [Gulp-Concat](plugins/concat.md) - объединение файлов в один общий
 
 ***PostCss*** :
-* [Autoprefixer](./PostCSS/plugins/autoprefixer.md)
-* [Autoprefixer](../PostCSS/plugins/autoprefixer.md)
+* [Autoprefixer](../PostCSS/plugins/autoprefixer.md) - автопрефиксер CSS свойств
+* [PreCSS](../PostCSS/plugins/precss.md) - использование возможностей Sass(переменные..)
+* [CssNext](../PostCSS/plugins/cssnext.md) - использование самых новых возможностей в CSS
 
 ***Опциональные*** :
 * [Gulp-Concat-Css](plugins/concat-css.md) - объединение CSS файлов в один
