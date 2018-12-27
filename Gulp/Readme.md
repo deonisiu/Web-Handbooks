@@ -1,5 +1,9 @@
 # Gulp ver. 3.9.1
 
+## Напоминалка
+
+* Установка пакетов из package.json -> `npm install` (мой [package.json](package.md))
+
 ---
 ## Почитать
 * [Генерация CSS-спрайтов с Gulp](https://habr.com/post/227945/)
