@@ -31,6 +31,11 @@
 <meta name="viewport" content="width=device-width">
 ```
 
+* Setting -> Editor -> LiveTemplates -> ZenHtml -> Change : Abbreviation=!; Change meta tag ***viewport***
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+```
+
 ---
 ## Список дополнительных плагинов
 
