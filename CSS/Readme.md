@@ -1,5 +1,7 @@
 # Справочник по CSS
 
+Установка ***normalize*** `npm install normalize.css`
+
 ---
 ## Интересные темы (для изучения)
 
