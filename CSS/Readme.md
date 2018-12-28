@@ -1,6 +1,10 @@
 # Справочник по CSS
 
-Установка ***normalize*** `npm install normalize.css`
+---
+## New
+
+* Установка ***normalize*** `npm install normalize.css`
+* [Коллекция CSS полезных снипетов](https://30-seconds.github.io/30-seconds-of-css/)
 
 ---
 ## Интересные темы (для изучения)
