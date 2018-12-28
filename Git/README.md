@@ -1,5 +1,6 @@
 # Справочник Git и GitHub
-Здесь будет собираться информация для изучения Git-а
+
+* [Оформление сообщения коммита](commit.md)
 
 ## Список файлов
 * [Git.md](Git.md) - Основная собранная информация про Git
@@ -8,7 +9,10 @@
 * [github-markdown](github-markdown.md) - Справочник по использованию синтаксиса markdown
 
 ## Полезные ссылки
+
 * [Ежедневная работа с Git](https://m.habrahabr.ru/post/174467/)
+* [Статья про Бейджики](https://stfalcon.com/ru/blog/post/improve-your-code-with-badges)
+* [Бейджи - img.shields.io](https://img.shields.io/#/)
 
 ## Git.md
 ### Оглавление разделов
