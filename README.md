@@ -29,6 +29,7 @@
 * [NPM](src/Npm/)
 * [PhpStorm 2017.1.4](src/PhpStorm/)
 * [PostCSS](src/PostCSS/)
+* [Pug](src/Pug/)
 * [Sass/scss](src/Sass/)
 * [SourceMaps](src/SourceMaps/)
 * [Sublime text 3](src/Sublime/)
