@@ -6,7 +6,9 @@
 
 ---
 ## Почитать
+
 * [Генерация CSS-спрайтов с Gulp](https://habr.com/post/227945/)
+* [Альтернатива для Gulp : npm-скрипты](http://prgssr.ru/development/pochemu-npm-skripty.html)
 
 ---
 ## Готовый [***gulpfile.js***](gulpfile.md)
@@ -54,6 +56,11 @@ gulp.task("watch", ['browser-sync'], function () {
 * [Gulp-Watch](plugins/gulp-watch.md) - watcher изменений + create|delet
 * [Gulp-Minify](plugins/gulp-minify.md) - минификация javascript с [terser](https://www.npmjs.com/package/terser)
 * [Gulp-Concat](plugins/concat.md) - объединение файлов в один общий
+
+***Препроцессор HTML Pug*** :
+* [Gulp-Pug](plugins/gulp-pug.md) - препроцессор HTML
+* [Gulp-Html-Beautify](plugins/gulp-html-beautify.md) - Форматирование разметки после Pug
+* [Gulp-Plumber](plugins/gulp-plumber.md) - Предовращение разрыва работы из-за ошибки
 
 ***PostCss*** :
 * [Autoprefixer](../PostCSS/plugins/autoprefixer.md) - автопрефиксер CSS свойств
