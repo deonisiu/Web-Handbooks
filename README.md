@@ -34,8 +34,7 @@
 * [Sublime text 3](src/Sublime/)
 * [БЭМ методология](src/BEM/)
 
-***Общая структура проекта***
-
+### Общая структура проекта
 ![project-template](src/project-template.jpg)
 
 ### Visually hidden
