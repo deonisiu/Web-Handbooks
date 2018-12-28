@@ -4,63 +4,40 @@
 * [Словарь терминов по front-end](src/termins.md)
 * [Скорость загрузки сайтов Goodle](https://developers.google.com/speed/)
 
----
-## Полезные ссылки
-
+***Links***
 * [HTTP/1.1 Semantic and Content](https://tools.ietf.org/html/rfc7231#page-3)
 * [BrowserSync](https://browsersync.io)
 
----
-## Навигация по странице
+***Навигация***
 * [Visually-hidden](https://github.com/deonisiu/Web-Handbooks#visually-hidden)
+* [Семантическое версионирование]()
+* [Расшифровка SOLID]()
 
-___
-## Разделы
-
-### Среда
-* [PhpStorm 2017.1.4](src/PhpStorm/)
-* [Sublime text 3](src/Sublime/)
-* [Console, Bash, Vim](src/Console/)
-* [Git, markdown](src/Git/)
-
----
-
-### Основы
-* [HTML](src/HTML/)
-* [CSS](src/CSS/)
-* [JavaScript](src/JavaScript/)
----
-
-### Технологии
-* [БЭМ методология](src/BEM/)
+# Категории
 * [Bootstrap](src/Bootstrap/)
-* [Sass/scss](src/Sass/)
-* [PostCSS](src/PostCSS/)
-* [SourceMaps](src/SourceMaps/)
----
-
-### Автоматизация
-* [NPM](src/Npm/)
-* [Gulp](src/Gulp/)
 * [Bower(deprecated)](src/Bower/)
-* [EditorConfig](src/EditorConfig/)
-
-### Unsorted
-* [HTTP-REST - пустой](src/HTTP-REST/)
 * [CDN - пустой](src/CDN/)
-
----
-## Дополнительные инструменты
-
+* [Console, Bash, Vim](src/Console/)
+* [CSS](src/CSS/)
+* [EditorConfig](src/EditorConfig/)
+* [Git, markdown](src/Git/)
+* [Gulp](src/Gulp/)
+* [HTML](src/HTML/)
+* [HTTP-REST - пустой](src/HTTP-REST/)
+* [JavaScript](src/JavaScript/)
 * [notepad++](src/notepad++/)
+* [NPM](src/Npm/)
+* [PhpStorm 2017.1.4](src/PhpStorm/)
+* [PostCSS](src/PostCSS/)
+* [Sass/scss](src/Sass/)
+* [SourceMaps](src/SourceMaps/)
+* [Sublime text 3](src/Sublime/)
+* [БЭМ методология](src/BEM/)
 
----
-## Общая структура проекта
-
+***Общая структура проекта***
 ![project-template](src/project-template.jpg)
 
----
-## Visually hidden
+### Visually hidden
 ```css
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
@@ -87,7 +64,7 @@ input[type="radio"].visually-hidden {
 ```
 
 ---
-## Семантическое Версионирование 
+### Semantic Version
 Учитывая номер версии `МАЖОРНАЯ.МИНОРНАЯ.ПАТЧ`, следует увеличивать:  
 
  1. `МАЖОРНУЮ` версию, когда сделаны обратно несовместимые изменения API.
@@ -98,7 +75,7 @@ input[type="radio"].visually-hidden {
 Дополнительные обозначения для предрелизных и билд-метаданных возможны как дополнения к `МАЖОРНАЯ.МИНОРНАЯ.ПАТЧ` формату.
 
 ---
-## Что такое SOLID принципы?
+### SOLID
 
 __S - Single responsibility principle - Принцип единственной обязанности:__
 
