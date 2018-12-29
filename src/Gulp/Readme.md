@@ -60,7 +60,7 @@ gulp.task("watch", ['browser-sync'], function () {
 ***Препроцессор HTML Pug*** :
 * [Gulp-Pug](plugins/gulp-pug.md) - препроцессор HTML
 * [Gulp-Html-Beautify](plugins/gulp-html-beautify.md) - Форматирование разметки после Pug
-* [Gulp-Plumber](plugins/gulp-plumber.md) - Предовращение разрыва работы из-за ошибки
+* [Gulp-Plumber](plugins/gulp-plumber.md) - Предотвращение разрыва работы из-за ошибки
 
 ***PostCss*** :
 * [Autoprefixer](../PostCSS/plugins/autoprefixer.md) - автопрефиксер CSS свойств
