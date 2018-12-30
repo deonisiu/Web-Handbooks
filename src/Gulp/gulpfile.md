@@ -6,10 +6,16 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     concat = require('gulp-concat'),
 
+    // PostCSS
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     cssnext = require('cssnext'),
     precss = require('precss'),
+
+    // Html Pug
+    pug = require('gulp-pug'),
+    htmlBeautify = require('gulp-html-beautify'),
+    plumber = require('gulp-plumber'),
 
     browserSync = require('browser-sync').create();
 
@@ -34,6 +40,35 @@ gulp.task('stream', ['browser-sync'], function () {
         gulp.start('concat-js');
     });
 });
+
+// HTML Pug
+//-----------------------------------------------
+
+// Task преобразование .pug files in .html
+gulp.task('pug-build', function () {
+   return gulp.src('src/pug/*.pug')
+       .pipe(plumber())
+       .pipe(pug())
+       .pipe(gulp.dest('src/testPug'))
+       ;
+});
+
+// Task форматирования html после pug-a в нормальный вид
+gulp.task('pug', ['pug-build'], function () {
+    var options = {
+        indentSize: 2,
+        unformatted: [
+            // https://www.w3.org/TR/html5/dom.html#phrasing-content
+            'abbr', 'area', 'b', 'bdi', 'bdo', 'br', 'cite','code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'ins', 'kbd', 'keygen', 'map', 'mark', 'math', 'meter', 'noscript','object', 'output', 'progress', 'q', 'ruby', 's', 'samp', 'small','strong', 'sub', 'sup', 'template', 'time', 'u', 'var', 'wbr', 'text','acronym', 'address', 'big', 'dt', 'ins', 'strike', 'tt'
+        ]
+    };
+    return gulp.src('src/testPug/*.html')
+        .pipe(plumber())
+        .pipe(htmlBeautify(options))
+        .pipe(gulp.dest('src/testPug/result'));
+});
+
+//-----------------------------------------------
 
 gulp.task('concat-js', function () {
     return gulp.src(['src/js/start.js', 'src/js/scripts/**/*.js', 'src/js/end.js'])
