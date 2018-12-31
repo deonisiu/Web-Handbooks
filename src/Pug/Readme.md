@@ -8,6 +8,17 @@ Pug - это препроцессор HTML и шаблонизатор напи�
 * [GitHub page](https://github.com/pugjs/pug)
 * [Настройка Gulp+Pug+Beautify](http://4webfan.ru/pug-gulp/)
 
+## Список сниппетов
+* ! - main template
+* a
+* atr/atr2/atr3 - tag with atr
+* cl - tag with class
+* form
+* img
+* input
+* link
+* script
+
 ---
 ## Основы
 
