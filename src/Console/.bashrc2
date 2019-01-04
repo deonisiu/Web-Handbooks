@@ -57,7 +57,7 @@ add_branch() {
 
 .bashrc() {
   subl ~/.bashrc
-  subl /c/Denis/Projects/git_projects/Web-Handbooks/Console/.bashrc2
+  subl /c/Denis/Projects/git_projects/Web-Handbooks/src/Console/.bashrc2
 }
 
 # Отработка условия существования файла в переменной $1
@@ -122,7 +122,7 @@ upl() {
 # }
 
 download() {
-  cd /d/Denis/download/downloadWORK
+  cd /d/Denis/download
 }
 
 books() {
