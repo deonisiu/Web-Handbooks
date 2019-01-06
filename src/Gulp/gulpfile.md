@@ -19,7 +19,7 @@ var gulp = require('gulp'),
 
     browserSync = require('browser-sync').create();
 
-// Отслеживание изменений в SCSS .html style.css .js
+// Отслеживание изменений в SCSS .html style.css .js .pug
 // ---
 // Внутри watch добавляется конструкция {usePolling:true}
 // позволяющая не увеличивать время выполнения таска
@@ -31,13 +31,18 @@ gulp.task('stream', ['browser-sync'], function () {
     watch('src/*.html', {usePolling:true}, browserSync.reload);
 
     watch('src/css/style.css', {usePolling:true}, browserSync.reload);
-    watch('src/css/style.css', {usePolling:true}, function () {
-        gulp.start('autoprefixer');
-    });
+    // watch('src/css/style.css', {usePolling:true}, function () {
+    //     gulp.start('buildcss');
+    // });
 
     watch('src/js/**/*.js', {usePolling:true}, browserSync.reload);
     watch(['src/js/start.js', 'src/js/scripts/**/*.js', 'src/js/end.js'], {usePolling:true}, function () {
         gulp.start('concat-js');
+    });
+
+    // Pug watch
+    watch('src/pug/**/*.pug', {usePolling:true}, function () {
+        gulp.start('pug');
     });
 });
 
@@ -46,10 +51,10 @@ gulp.task('stream', ['browser-sync'], function () {
 
 // Task преобразование .pug files in .html
 gulp.task('pug-build', function () {
-   return gulp.src('src/pug/*.pug')
+   return gulp.src('src/pug/**/*.pug')
        .pipe(plumber())
        .pipe(pug())
-       .pipe(gulp.dest('src/testPug'))
+       .pipe(gulp.dest('src'))
        ;
 });
 
@@ -62,34 +67,36 @@ gulp.task('pug', ['pug-build'], function () {
             'abbr', 'area', 'b', 'bdi', 'bdo', 'br', 'cite','code', 'data', 'datalist', 'del', 'dfn', 'em', 'embed', 'i', 'ins', 'kbd', 'keygen', 'map', 'mark', 'math', 'meter', 'noscript','object', 'output', 'progress', 'q', 'ruby', 's', 'samp', 'small','strong', 'sub', 'sup', 'template', 'time', 'u', 'var', 'wbr', 'text','acronym', 'address', 'big', 'dt', 'ins', 'strike', 'tt'
         ]
     };
-    return gulp.src('src/testPug/*.html')
+    return gulp.src('src/*.html')
         .pipe(plumber())
         .pipe(htmlBeautify(options))
-        .pipe(gulp.dest('src/testPug/result'));
+        .pipe(gulp.dest('src'));
 });
 
 //-----------------------------------------------
 
+// Task соединение всех .js in script.js
 gulp.task('concat-js', function () {
     return gulp.src(['src/js/start.js', 'src/js/scripts/**/*.js', 'src/js/end.js'])
         .pipe(concat('script.js'))
         .pipe(gulp.dest('src/js'));
 });
 
+// Task преобразования style.sass in style.css
 gulp.task('sass', function () {
     return gulp.src("src/sass/style.scss")
         .pipe(sass({outputStyle: 'expanded'})).on('error', sass.logError)
         .pipe(gulp.dest("src/css"));
 });
 
-// Минификация css
+// Минификация css -------------
 gulp.task('minify-css', function () {
     return gulp.src("src/css/style.css")
         .pipe(cleanCss({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'));
 });
 
-// Сервер синхронизации
+// Сервер синхронизации -------------
 gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
@@ -99,6 +106,7 @@ gulp.task('browser-sync', function () {
     });
 });
 
+// Конечная сборка проекта (not working)
 gulp.task('build', ['buildhtml', 'buildcss', 'buildjs', 'buildimg']);
 
 // Build Html for dist folder
