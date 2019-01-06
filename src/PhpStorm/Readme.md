@@ -11,6 +11,8 @@
 
 * Settings -> Tools -> Terminal : Shell_path=`"cmd.exe" /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"`
 
+* Settings -> Editor -> General -> SmartKeys -> Backspace: Unindent="To nearest indent position" - Отключение смарт отступа
+
 * Settings -> Editor -> General -> Appearance : "Show whitespaces"=true
 
 * Settings -> Editor -> General : "Use soft wraps in editor"=True
