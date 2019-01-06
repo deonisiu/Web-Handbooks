@@ -55,14 +55,14 @@
 ```php
 doctype
 html(lang="$ENV_LOCALE$")
-head
-    meta(http-equiv="X-UA-Compatible" content="ie=$IE$")
-    meta(charset="$CHARSET$")
-    meta(name="viewport" content="width=device-width")
-    link(rel="stylesheet" href="$STYLESHEET$")
-    title $TITLE$
-body
-  $END$
+	head
+	    meta(http-equiv="X-UA-Compatible" content="ie=$IE$")
+	    meta(charset="$CHARSET$")
+	    meta(name="viewport" content="width=device-width")
+	    link(rel="stylesheet" href="$STYLESHEET$")
+	    title $TITLE$
+	body
+	  $END$
 ```
 ---
 * Name="atr" Desc="tag with attribute" vars :
