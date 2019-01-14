@@ -32,6 +32,7 @@
 * [Pug](src/Pug/)
 * [Sass/scss](src/Sass/)
 * [SourceMaps](src/SourceMaps/)
+* [SSH](src/SSH/)
 * [Sublime text 3](src/Sublime/)
 * [БЭМ методология](src/BEM/)
 
