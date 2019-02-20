@@ -22,6 +22,7 @@ Bash - это интерпретатор командного языка, вып
 * [Git советы](http://idoka.ru/git-tips-and-tricks/)
 * [Bash customization(углубленная)](https://wiki.archlinux.org/index.php/Bash/Prompt_customization_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9))
 * [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html#Command-Line-Editing)
+* [Эффективная работа в командной строке: навигация и поиск](https://ru.hexlet.io/blog/posts/effective_shell_navigation)
 
 ### Настройки
 
