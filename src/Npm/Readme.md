@@ -9,6 +9,11 @@
 * [Npm intro](http://prgssr.ru/development/vvedenie-v-paketnyj-menedzher-npm-dlya-nachinayushih.html#heading-section-1)
 
 ---
+## Packages
+
+* [Npm-check-updates](packages/ncu.md) - обновление npm пакетов
+
+---
 ## Сокращение команд
 - install = -i
 - --global = -g
