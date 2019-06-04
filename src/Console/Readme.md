@@ -15,6 +15,7 @@ Bash - это интерпретатор командного языка, вып
 
 ### Полезные ссылки
 
+* [Как установить Git и работать в консоли YouTube](https://www.youtube.com/watch?v=dnrcpHcJyVo&t=149s)
 * [Настройки Bash](http://sozdstel.blogspot.ru/2011/01/bash.html)
 * [Оболочка Bash — шпаргалка для начинающих](https://tproger.ru/translations/bash-cheatsheet/)
 * [Обустраиваем консоль](http://www.xakep.ru/55981/)
