@@ -10,6 +10,7 @@
 
 ## Полезные ссылки
 
+* [Как установить Git и работать в консоли YouTube](https://www.youtube.com/watch?v=dnrcpHcJyVo&t=149s)
 * [Ежедневная работа с Git](https://m.habrahabr.ru/post/174467/)
 * [Статья про Бейджики](https://stfalcon.com/ru/blog/post/improve-your-code-with-badges)
 * [Бейджи - img.shields.io](https://img.shields.io/#/)
