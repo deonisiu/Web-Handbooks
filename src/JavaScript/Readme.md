@@ -1,5 +1,12 @@
 # Справочник по JavaScript
 
+## Полезные ссылки
+
+* [Список DOM событий (для addEventListener)](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+## Разделы
+
+
 ---
 ## Структура js папки в проекте для сборки через Gulp-concat
 
@@ -34,11 +41,3 @@ window.onload = function () {
  * End scripts
  */
 ```
-
-## Полезные ссылки
-
-* [Список DOM событий (для addEventListener)](https://developer.mozilla.org/en-US/docs/Web/Events)
-
-## Разделы
-
-* [Библиотека jQuery](jQuery/)

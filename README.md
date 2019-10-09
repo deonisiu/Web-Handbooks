@@ -25,6 +25,7 @@
 * [HTML](src/HTML/)
 * [HTTP-REST - пустой](src/HTTP-REST/)
 * [JavaScript](src/JavaScript/)
+* [jQuery](src/jQuery/)
 * [notepad++](src/notepad++/)
 * [NPM](src/Npm/)
 * [PhpStorm 2017.1.4](src/PhpStorm/)
