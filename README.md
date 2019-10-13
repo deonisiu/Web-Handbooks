@@ -30,7 +30,7 @@
 * [notepad++](src/notepad++/)
 * [NPM](src/Npm/)
 * [PHP](src/php)
-* [PhpStorm 2017.1.4](src/PhpStorm/)
+* [PhpStorm](src/PhpStorm/)
 * [PostCSS](src/PostCSS/)
 * [Pug](src/Pug/)
 * [OpenGraph](src/OpenGraph/)
