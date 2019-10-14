@@ -1,5 +1,18 @@
 # PhpStorm (редактор кода от JetBrains)
 
+## ВАЖНО!
+* ***При настройки использовать файл "PhpStorm_settings.zip"***
+
+---
+## Настройка проекта под Git
+* Вывести меню `Remote Host` : Tools -> Deployment -> Browse Remote Host 
+
+---
+## Bitrix24 BOX
+* Родные модули в папке ***bitrix/modules***
+* Пользовательские модули в папке ***local/modules***
+* Для тестов папка ***test***
+
 ---
 ## Полезные сочетания клавиш
 
