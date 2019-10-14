@@ -39,6 +39,7 @@
 * [SSH](src/SSH/)
 * [Sublime text 3](src/Sublime/)
 * [БЭМ методология](src/BEM/)
+* [Шаблон проектирования MVC](src/mvc)
 
 ### Общая структура проекта
 ![project-template](src/project-template.jpg)
