@@ -18,6 +18,7 @@ Markdown (маркдаун) — облегчённый язык разметки
 * [Цитаты](#9)
 * [Выделение текста или кода](#10)
 * [Ссылки](#11)
+* [Ссылки NEW](#17)
 * [Изображения](#12)
 * [Использование HTML (на Github-е работают не все теги)](#13)
 * [Нумерованный список](#14)
@@ -77,7 +78,7 @@ ___
 > Это наша цитата
 
 ###  <a name="10">Выделение текста или кода </a>
-Выделить текст или часть кода можно с помощью двух символов гравис (обратный апостроф) `  
+Выделить текст или часть кода можно с помощью двух символов гравис (обратный апостроф) \`  
 Выделенная: `часть текста символом гравис`
 
 Для выделения блока кода используют три символа в строчке до и после блока кода:
@@ -124,6 +125,41 @@ I get 10 times more traffic from [Google][1] than from
 [2]: http://search.yahoo.com/  "Yahoo Search"
 [3]: http://search.msn.com/    "MSN Search"
 ```
+
+### <a name='17'>Ссылки NEW </a>
+* Возможно создание ссылок с последующим повторным использованием:
+```php
+// Данные код дает возможность использовать в разных местах ссылки: [*][**][***] и тд.
+// добавляя к ним комментарии, если нужно -> "comment"
+
+[*]://habr.com/post/313820/ "Rust > Servo > Quantum"
+[**]://habr.com/post/402173/ "wasm - низкоуровневый ЯП, выполняющийся в браузере"
+[***]://habr.com/post/407239/
+[www]://mozilla.org/ru/firefox/all/#product-desktop-release "Site"
+[esr]://mozilla.org/ru/firefox/all/#product-desktop-esr "Extended support"
+[WebAssembly]://habr.com/post/428347/ "RU, 2018-10-31"
+[Waterfox]://www.waterfoxproject.org/ "браузер с поддержкой XUL-расширений"
+[PaleMoon]://www.palemoon.org/ "браузер с поддержкой XUL-расширений"
+```
+
+#### Пример
+[*]://habr.com/post/313820/ "Rust > Servo > Quantum"
+[**]://habr.com/post/402173/ "wasm - низкоуровневый ЯП, выполняющийся в браузере"
+[***]://habr.com/post/407239/
+[www]://mozilla.org/ru/firefox/all/#product-desktop-release "Site"
+[esr]://mozilla.org/ru/firefox/all/#product-desktop-esr "Extended support"
+[WebAssembly]://habr.com/post/428347/ "RU, 2018-10-31"
+[Waterfox]://www.waterfoxproject.org/ "браузер с поддержкой XUL-расширений"
+[PaleMoon]://www.palemoon.org/ "браузер с поддержкой XUL-расширений"
+
+* some[*]
+* some[**]
+* some[***]
+* [www]
+* [esr]
+* [WebAssembly]
+* [Waterfox]
+* [PaleMoon]
 
 ###  <a name="12">Изображения </a>
 Изображения помещаются на страницу также, как и ссылки, с одним отличием: в начале записи используется знак !
