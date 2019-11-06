@@ -3,6 +3,16 @@
 ## ВАЖНО!
 * ***При настройки использовать файл "PhpStorm_settings.zip"***
 
+## Навигация по коду в редакторе
+You can use the following navigation shortcuts:
+
+Ctrl-F12 - file structure popup
+Alt-Up/Down - previous/next method
+F2/Shift-F2 - navigate to next/previous error or warning
+Ctrl-[, Ctrl-] - navigate to start/end of code block
+Ctrl-F - incremental search
+Ctrl-Up/Down - scroll one line up/down
+
 ---
 ## Настройка проекта под Git
 * Вывести меню `Remote Host` : Tools -> Deployment -> Browse Remote Host 
