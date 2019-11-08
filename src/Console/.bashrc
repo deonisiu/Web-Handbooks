@@ -11,7 +11,8 @@ alias t='touch'
 
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
 PATH=$PATH:'/c/Program Files/Notepad++' $*
-PATH=$PATH:'/e/PHP/PhpStorm 2017.1.4/bin' $*
+# PATH=$PATH:'/e/PHP/PhpStorm 2017.1.4/bin' $*
+PATH=$PATH:'/c/Program Files/JetBrains/PhpStorm 2019.2.3/bin' $*
 PATH=$PATH:'/e/JavaScript/WebStorm 2017.1/bin' $*
 PATH=$PATH:'/c/Program Files/Opera' $*
 PATH=$PATH:'/e/Microsoft VS Code' $*
@@ -48,7 +49,15 @@ alias g_space='git diff --check'
 alias g_move='git reset'
 alias g_firstPush='git push --set-upstream' $1 $2
 
-temp='/e/temp'
+temp='/d/temp'
+
+temp() {
+  mv $* $temp
+}
+
+get() {
+  mv $temp/* .
+}
 
 add_branch() {
   gr add $1 $2
@@ -56,7 +65,7 @@ add_branch() {
 
 .bashrc() {
   subl ~/.bashrc
-  subl /e/Projects/git_projects/Web-Handbooks/Console/.bashrc
+  # subl /e/Projects/git_projects/Web-Handbooks/Console/.bashrc
 }
 
 # Отработка условия существования файла в переменной $1
@@ -76,6 +85,10 @@ add_branch() {
 
 opera() {
   opera.exe $* &
+}
+
+php() {
+  phpstorm64.exe $* &
 }
 
 storm() {
@@ -117,7 +130,8 @@ upl() {
 }
 
 localhost(){
-  cd /e/OpenServer/OSPanel/domains/localhost
+  # cd /e/OpenServer/OSPanel/domains/localhost
+  cd /d/denis/xampp/htdocs/
 }
 
 download() {
@@ -130,6 +144,14 @@ books() {
 
 home() {
   cd /e/Projects
+}
+
+work() {
+  cd ~/Desktop/ITbiZon/Projects
+}
+
+hgit() {
+  cd /c/github
 }
 
 desk() {
