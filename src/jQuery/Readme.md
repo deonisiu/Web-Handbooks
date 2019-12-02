@@ -1,7 +1,8 @@
 # jQuery - JavaScript Framework
 
-[jQuery shortlist](shortlist.md)
-[jQuery живые примеры](https://anton.shevchuk.name/book/code/)
+* [jQuery shortlist](shortlist.md)
+* [jQuery для начинающих](https://antonshevchuk.gitbooks.io/jquery-for-beginners/content/)
+* [jQuery живые примеры](https://anton.shevchuk.name/book/code/)
 
 ---
 ## Основы
