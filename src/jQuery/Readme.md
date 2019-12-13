@@ -537,10 +537,12 @@ $.ajax({
 
 </details>
 
-### Объект Deferred
+<details>
+  <summary><b>Объект Deferred</b></summary>
+
 * Позволяет заставлять асинхронный JavaScript работать так, как нам хочется.
 * Всё, что относится к Promise верно и для Deferred.
-```php
+```js
 // создание объекта Deferred
 var D = $.Deferred();
 
@@ -551,17 +553,12 @@ D.then(function() { console.log("second") });
 // подключение -функций
 D.catch(function() { console.log("fail") });
 
+// метод always будет выполнен вне зависимости от выбранного статуса
+// в действительности, внутри происходит вызов «.done(arguments)»
+D.always(function() { console.log("always") });
 
-```
-
-```php
-// инициализация Deferred объекта
-// статус «ожидает выполнение»
-var D = $.Deferred();
-
-// подключаем обработчики
-D.then(function() { console.log("first") });
-D.then(function() { console.log("second") });
+// затем вызываем один из 2 статусов - fulfilled(+) или rejected(-)
+// D.resolve(); || D.reject();
 
 // изменяем статус на «fulfilled» - «выполнен успешно»
 // для этого вызываем resolve()
@@ -571,3 +568,93 @@ D.resolve();
 // данный обработчик подключён слишком поздно и будет вызван сразу
 D.then(function() { console.log("third") });
 ```
+* Блок-схема
+![deferred](https://user-images.githubusercontent.com/33727234/70408381-8b159080-1a7a-11ea-9052-b8a924101239.jpg)
+
+* Существуют ещё методы «.resolveWith()» и «.rejectWith()», они позволяют изменять контекст вызываемых callback-функций (т.е. внутри них «this» будет смотреть на указанный контекст).
+
+### Цепочки вызовов
+```js
+var D = $.Deferred();
+
+D.then(function() {
+  // подождём окончания AJAX-запроса
+  return $('article img').slideUp(2000).promise() // если убрать return то след. then наступит сразу же
+})
+.then(function(){
+  // подождём, пока спрячутся картинки
+  return $('article p').slideUp(2000).promise()   // если убрать return то след. then наступит сразу же
+})
+.then(function(){
+  // подождём, пока спрячутся параграфы
+  return $('article').hide(2000).promise()        // если убрать return то след. then наступит сразу же
+})
+.then(function(){
+  // всё сделано
+});
+
+D.resolve();
+```
+
+### Методы .notify() & .progress()
+* Первый(.notify) шлёт послания в callback-функции, которые зарегистрированы с помощью второго(.progress).
+```js
+var D = $.Deferred();
+
+var money = 100; // наш бюджет
+
+// съём денежки
+D.progress(function($){
+    console.log(money + " - " + $ + " = " + (money-$));
+    money -= $;
+    if (money < 0) { // деньги закончились
+        D.reject();
+    }
+});
+
+// тратим деньги
+setTimeout(function(){ D.notify(40); }, 500);  // покупка 1
+setTimeout(function(){ D.notify(50); }, 1000); // покупка 2
+setTimeout(function(){ D.notify(30); }, 1500); // покупка 3
+
+D.then(function(){ console.info("All Ok") });
+D.catch(function(){ console.error("Insufficient Funds") });
+```
+
+</details>
+
+<details>
+  <summary><b>Объект Callbacks</b></summary>
+* Позволяет составлять списки функций обратного вызова
+* Нет разделения на позитивный и негативный сценарии
+* Стек функций, который будет выполнен по команде .fire()
+
+```js
+var C = $.Callbacks();
+
+C.add(function(msg) {
+    console.log(msg + " first")
+});
+
+C.add(function(msg) {
+    console.log(msg + " second")
+});
+
+C.fire("Go");
+C.fire("Go2");
+
+// result in console:
+// Go first
+// Go second
+// Go2 first
+// Go2 second
+```
+* Может принимать параметры:
+```js
+$.Callbacks('once')         - все функции будут вызваны единожды (аналогично как в объекте Deferred)
+$.Callbacks('memory')       - сохранять значение с последнего вызова «.fire()», и скармливать его в ново-зарегистрированные функции обратного вызова, и лишь потом обрабатывает новое значение
+$.Callbacks('unique')       - список функций обратного вызова фильтруется по уникальности
+$.Callbacks('stopOnFalse')  - как только какая-нибудь функция вернёт «false», процесс запуска остановится
+```
+
+</details>
