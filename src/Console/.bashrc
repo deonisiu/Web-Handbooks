@@ -10,12 +10,10 @@ alias ls='ls -S -1 --color -A -F --group-directories-first | sort'
 alias t='touch'
 
 PATH=$PATH:'/c/Program Files/Sublime Text 3' $*
-PATH=$PATH:'/c/Program Files/Notepad++' $*
-# PATH=$PATH:'/e/PHP/PhpStorm 2017.1.4/bin' $*
-PATH=$PATH:'/c/Program Files/JetBrains/PhpStorm 2019.2.3/bin' $*
 PATH=$PATH:'/e/JavaScript/WebStorm 2017.1/bin' $*
 PATH=$PATH:'/c/Program Files/Opera' $*
 PATH=$PATH:'/e/Microsoft VS Code' $*
+PATH=$PATH:'/c/Program Files/JetBrains/PyCharm Community Edition 2019.3.3/bin' $*
 
 git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -50,6 +48,10 @@ alias g_move='git reset'
 alias g_firstPush='git push --set-upstream' $1 $2
 
 temp='/d/temp'
+
+pyc() {
+  pycharm64.exe $1
+}
 
 temp() {
   mv $* $temp
@@ -158,7 +160,7 @@ desk() {
   cd ~/Desktop
 }
 
-m_dir() {
+dir() {
   mkdir $*
 }
 
