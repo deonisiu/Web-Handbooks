@@ -35,6 +35,27 @@ __debugInfo()   -> вызывается функцией var_dump(), для вы
 if($obj instanceof ClassName) // -> определяет, является ли текущий объект экземпляром указанного класса
 ```
 
+### POST запрос через PHP
+```php
+$array = array(
+	'login'    => 'admin',
+	'password' => '1234'
+);		
+ 
+$ch = curl_init('https://example.com');
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $array); 
+ 
+// Или предать массив строкой: 
+// curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($array, '', '&'));
+ 
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch, CURLOPT_HEADER, false);
+$html = curl_exec($ch);
+curl_close($ch);	
+```
+
 # PHP ООП
 
 ## Основы
